@@ -1,22 +1,23 @@
-.. GENI Developer Docs documentation master file, created by
-   sphinx-quickstart on Sun Jul  8 11:25:16 2012.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. GENI Developer Docs
 
-Welcome to GENI Developer Docs's documentation!
-===============================================
+The GENI Developer Docs
+=======================
 
-Contents:
+The point of this documentation is to help hackers and developers get up and running using the GENI platform. Don't know what GENI is? We're glad you asked.
+
+
+
+The Side of Hacking You Haven't Been Exposed To
+-----------------------------------------------
+
+If you're a software developer there's a good chance you've been exposed to hackathons or programming competitions before.  
 
 .. toctree::
    :maxdepth: 2
 
-
-
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
-
+* :ref:`search`   
