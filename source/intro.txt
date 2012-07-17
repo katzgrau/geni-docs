@@ -1,0 +1,12 @@
+Introduction
+============
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   intro/what-is-geni
+   intro/what-can-i-do-with-geni
+   intro/key-geni-concepts
+   intro/how-is-geni-set-up
+   GENI Quick Start <intro/getting-started>
