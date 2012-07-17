@@ -11,7 +11,7 @@ These documents are intended to help software developers become familiar with GE
 
 A major benefit to GENI is that experiments can run "at scale", meaning they just aren't similated in a lab, but can be run on machines that you provision accross the world.
 
-Read on to find out :doc:`why GENI exists in the first place <intro/what-is-geni>`.
+Read on to find out :doc:`why GENI exists <intro/what-is-geni>`.
 
 .. toctree::
    :maxdepth: 2
