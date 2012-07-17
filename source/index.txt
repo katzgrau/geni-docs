@@ -3,9 +3,15 @@
 The GENI Developer Docs
 =======================
 
-The point of this documentation is to help hackers and developers get up and running using the GENI platform.
+These documents are intended to help software developers become familiar with GENI, a project sponsored by the National Science Foundation to help experiment with *future networks*. The "what and why" of GENI is discussed in the next section, but overall, GENI is a platform for:
 
+- Exploring gigabit networks
+- Implementing new routing rules in those networks
+- Writing application which leverage these networks
 
+A major benefit to GENI is that experiments can run "at scale", meaning they just aren't similated in a lab, but can be run on machines that you provision accross the world.
+
+Read on to find out :doc:`why GENI exists in the first place <intro/what-is-geni>`.
 
 The Side of Hacking You Haven't Been Exposed To
 -----------------------------------------------
