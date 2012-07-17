@@ -13,11 +13,6 @@ A major benefit to GENI is that experiments can run "at scale", meaning they jus
 
 Read on to find out :doc:`why GENI exists in the first place <intro/what-is-geni>`.
 
-The Side of Hacking You Haven't Been Exposed To
------------------------------------------------
-
-If you're a software developer there's a good chance you've been exposed to hackathons or programming competitions before ... [life-changing pitch continues]
-
 .. toctree::
    :maxdepth: 2
    :numbered:
