@@ -1,6 +1,11 @@
 What Is GENI?
 =============
 
+GENI is both a project sponsored by the NSF and commonly refers to a number of applications and tools used to build and experiement with high-speed programmable networks. These tools are being developed by various institutions, and the efforts surrounding GENI are still very much **in progress**.
+
+A Short Background (Or, What Are the Limitations of the Internet Today?)
+------------------------------------------------------------------------
+
 The landscape of the internet has changed dramatically since its beginnings as `ARPANET <http://en.wikipedia.org/wiki/ARPANET>`_ in 1969. The devices using it have grown to include everything from PCs, laptops, and mobile phones to TVs, cars, and refrigerators. In addition to the range of devices, growing advanced in video and voice technology require greater bandwidth.
 
 Although some of these applications were foreseeable, this is not what the current architecture of the internet was intended for.
@@ -25,4 +30,3 @@ GENI refers to both the overall project and the suite of tools and services that
 It's the Side of Hacking You Haven't Been Exposed To
 ----------------------------------------------------
 
-Test
