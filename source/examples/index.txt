@@ -4,4 +4,4 @@ Examples
 .. toctree::
    :maxdepth: 1
 
-   Ping Example <examples/example-1.txt>
+   Ping Example <example-1.txt>

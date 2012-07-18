@@ -4,5 +4,5 @@ Conclusion
 .. toctree::
    :maxdepth: 1
 
-   conclusion/additional-resources
-   conclusion/help
+   additional-resources
+   help
