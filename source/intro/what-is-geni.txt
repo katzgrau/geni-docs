@@ -10,7 +10,7 @@ The landscape of the internet has changed dramatically since its beginnings as `
 
 Although some of these applications were foreseeable, this is not what the current architecture of the internet was intended for.
 
-Vint Cerf, widely considered a `father of the internet <http://en.wikipedia.org/wiki/History_of_the_Internet#TCP.2FIP>`_ gives a talk below, commenting on the internet's beginnings and inherent its limitations.
+Vint Cerf, widely considered a `father of the internet <http://en.wikipedia.org/wiki/History_of_the_Internet#TCP.2FIP>`_ gives a talk below, commenting on the internet's beginnings and its inherent limitations.
 
 .. raw:: html
 

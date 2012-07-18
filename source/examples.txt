@@ -3,6 +3,5 @@ Examples
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    Ping Example <examples/example-1.txt>

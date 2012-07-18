@@ -15,10 +15,12 @@ Read on to find out :doc:`why GENI exists <intro/what-is-geni>`.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    intro
+   setup
    examples
+   Core Documentation <main>
+   conclusion 
 
 Indices and tables
 ------------------
