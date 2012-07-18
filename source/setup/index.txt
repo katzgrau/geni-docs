@@ -1,8 +1,12 @@
 Setup
 =====
 
+You're now ready to sign up and start experimenting with GENI. The first thing you need to do is :doc:`acquire GENI credentials <get-your-geni-credentials>`. When that's finished, you're encouraged to try out the :doc:`GENI Quick Start <getting-started>` in order to see the fundamentals of working with GENI.
+
+**Contents**
+
 .. toctree::
    :maxdepth: 1
 
    get-your-geni-credentials
-   GENI Quick Start <getting-started>
+   getting-started

@@ -1,6 +1,8 @@
 Core Documentation
 ==================
 
+**Contents**
+
 .. toctree::
    :maxdepth: 1
 
