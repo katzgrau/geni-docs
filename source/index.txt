@@ -14,7 +14,6 @@ A major benefit to GENI is that experiments can run "at scale", meaning they jus
 Read on to find out :doc:`why GENI exists <intro/what-is-geni>`.
 
 .. toctree::
-   :maxdepth: 2
 
    intro/index
    setup/index

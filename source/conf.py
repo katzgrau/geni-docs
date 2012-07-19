@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'GENIDeveloperDocsdoc'
+htmlhelp_basename = 'GENIDeveloperDocs'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'GENIDeveloperDocs.tex', u'GENI Developer Docs Documentation',
+  ('index', 'GENIDeveloperDocs.tex', u'GENI Developer Docs',
    u'Kenny Katzgrau', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'genideveloperdocs', u'GENI Developer Docs Documentation',
+    ('index', 'genideveloperdocs', u'GENI Developer Docs',
      [u'Kenny Katzgrau'], 1)
 ]
 
@@ -227,7 +227,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'GENIDeveloperDocs', u'GENI Developer Docs Documentation',
+  ('index', 'GENIDeveloperDocs', u'GENI Developer Docs',
    u'Kenny Katzgrau', 'GENIDeveloperDocs', 'One line description of project.',
    'Miscellaneous'),
 ]
