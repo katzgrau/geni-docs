@@ -1,6 +1,6 @@
 Introduction
 ============
-
+ 
 **Contents**
 
 .. toctree::
@@ -8,5 +8,6 @@ Introduction
 
    what-is-geni
    what-can-i-do-with-geni
+   prerequisites
    key-geni-concepts
    how-is-geni-set-up

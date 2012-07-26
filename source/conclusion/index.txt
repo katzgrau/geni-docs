@@ -7,4 +7,4 @@ Conclusion
    :maxdepth: 1
 
    additional-resources
-   help
+   help 

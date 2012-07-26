@@ -6,4 +6,4 @@ Core Documentation
 .. toctree::
    :maxdepth: 1
 
-   tools
+   tools/index

@@ -1,0 +1,46 @@
+What You Need to Know Before Starting
+=====================================
+
+Before you dive into using GENI, there are a few concepts that you should be familiar with beforehand. A good grip on these concepts will ensure that you can follow along with various GENI tutorials, examples, and videos.
+
+Virtual Machines
+----------------
+
+We've mentioned that GENI is a virtual laboratory for running network experiments. As a credentialed GENI user, you are allowed to *request* and allocate resources around the world, such as virtual and physical machines.
+
+It's a good idea that you understand the basic difference between the different machine types. Sometimes it's helpful to work with specific machine types in your experiments.
+
+Additional Resources
+~~~~~~~~~~~~~~~~~~~~
+
+1. `Wikipedia - Virtual Machine <http://en.wikipedia.org/wiki/Virtual_machine>`_
+2. `Discussions on ServerFault <http://serverfault.com/questions/135431/is-virtual-machine-slower-than-the-underlying-physical-machine>`_
+
+Linux and Relevant Utilities
+----------------------------
+
+It's important that you are comfortable with using the Linux/UNIX command line. You will be using it heavily in the process of running your experiments, and it's the only method you'll have for controlling your resources.
+
+In particular, make sure you're well versed with:
+
+1. A `unix shell <http://en.wikipedia.org/wiki/Unix_shell>`_, such as `bash <http://en.wikipedia.org/wiki/Bash_(Unix_shell)>`_
+2. `The ssh utility (used for connecting to your machines) <http://support.suso.com/supki/SSH_Tutorial_for_Linux>`_
+3. `The ping utility <http://en.wikipedia.org/wiki/Ping_(networking_utility)>`_
+4. `Setting up and using SSH keys (your only login method) <http://www.ece.uci.edu/~chou/ssh-key.html>`_
+5. A scripting language, like `ruby <http://www.ruby-lang.org/en/>`_ or `python <http://www.python.org/>`_
+
+Networking
+----------
+
+What good would access to computing resources around the world be without a way to connect them? A basic understanding of computer networking concepts is important to have.
+
+More specifically:
+
+1. The layers of the `OSI model <http://en.wikipedia.org/wiki/OSI_model>`_
+2. `Internet Protocol, or IP <http://en.wikipedia.org/wiki/Internet_Protocol>`_, the backbone protocol of the internet
+3. `TCP <http://en.wikipedia.org/wiki/Transmission_Control_Protocol>`_ and `UDP <http://en.wikipedia.org/wiki/User_Datagram_Protocol>`_
+4. Connections over the mentioned protocols using `socket APIs <http://en.wikipedia.org/wiki/Network_socket>`_
+5. `How data packets are routed <http://en.wikipedia.org/wiki/Internet_layer>`_ around the internet
+
+When you feel comfortable with the topics above, you can move on to read about the :doc:`terms and concepts <key-geni-concepts>` used when discussing GENI.
+
