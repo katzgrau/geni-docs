@@ -38,6 +38,31 @@ A *slice* is an environment and conceptual container that your resources reside 
 
 Up until now, we have referred to the different computing and network components that you allocate within GENI as *resources*. In GENI terminology, these resources are typically called a *slivers*, but it represents that computing resources are often virtualized and shared on a physical machine. In the Image of *Flack* above, you can see the slivers that are going to be allocated for the *slice* named 'TestSlice': 1 Virtual Machine (VM), 1 Physical Machine (PC), and network interfaces to link them (lan0).
 
+**Clearinghouse**
+
+A *Clearinghouse* is a GENI authority that is capable of signing users up to experiment with GENI. In the GENI architecture, there are multiple clearinghouses. For the purposes of this document, you only need to be familiar with TODO.
+
+**Federation**
+
+This is the general idea that once you recieve your GENi credentials from a *Clearinghouse*, you can use them to request resources and slivers anywhere. In visual tools such as *Flack*, this is largely transparent.
+
+**Management Authority (Authority)**
+
+Resources around the world are managed by what is called a *Management Authority*. This is typically an organization or institution that manages the servers and virtual machines on their premises, and makes them available to GENI as a whole. In the image of *Flack* above, the "Managers" list on the far left are the *Management Authorities*.
+
+**Resource Specification (RSpec)**
+
+Also largely transparent to the end user when using tools such as *Flack*, a *Resource Specification*, more commonly called an *RSpec*, is an XML document that lists resources. It is used in two primary cases:
+
+1. When querying a *Management Authority* on what types of resources it has available. Before you ask for a few machines for your experiment, you need to know what is available to you, right? This is called an *Advertisement* RSpec.
+2. Once you get a list of resources available to you, and you decide what you need, you send an RSpec that describes the resources you are requesting to the appropriate *Management Authorities*.
+
+Again, with a visual tool such as Flack, you don't have a reason to build or read RSpecs manually. Flack does the work for you. If you are curious although, Flack allows you to both read the RSpecs it has created for you, and import RSpecs that you have written yourself or saved prior.
+
+**Ticket**
+
+When a request is made for resources (And an RSpec is sent out), the *Management Authorities* typically issues *Tickets*, which is essentially a promise to fulfill the request. Sometimes, requests cannot be fulfilled for various reasons.
+
 **Seattle**
 
 Seattle is another project under the GENI umbrella which allows you allocate virtual machines around the globe and run experiments. Some of these virtual machines reside on physcial machine, host virtual machines, and even mobile devices. Because of the transient connectivity of some devices, it is **very helpful** for simulating what the internet is really like for experiments. You do not need GENI *credentials* to use Seattle. Anyone can sign up.
@@ -53,3 +78,5 @@ TODO
 ----
 
 Perhaps define more succinctly what exactly an *aggregate* is. The term exists on the official GENI glossary, but may be overly broad for the average developer. The same goes for the term *authority*
+
+For the purposes of Mozilla Ignite, users will not really need to know about other clearinghouses aside formt he one their credentials came though. Keep this in mind for the Clearinghouse definition, which is marked with a TODO.
