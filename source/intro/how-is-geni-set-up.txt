@@ -1,2 +1,6 @@
 How Is GENI Set Up?
 ===================
+
+Additional Resources
+--------------------
+

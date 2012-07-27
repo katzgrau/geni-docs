@@ -1,3 +1,55 @@
 Key Terms and Concepts
 ======================
 
+Before you jump into reading the :doc:`core GENI documentation <../main/index>`, you should become familiar with the terminology used when discussing the project. Because GENI is a recently-developed, global platform, an evolving set of terms is used to described the details.
+
+Throughout the definitions, we'll refer the the figure below for reference. This is *Flack*, the visual interface used to interact with GENI. Flack is described in further detail below and in the :doc:`Flack guide <../main/tools/flack`.
+
+**Figure 1: Flack**
+
+.. image:: ../assets/images/flack-slivers.png
+
+Terms List
+----------
+
+The list of terms below is organized in a way that the items further up on the list will help build your understanding of the terms toward the end of the list. For example, it might be wise to know what an *RSpec* is before you know what a *Ticket* is. Terms mentioned within definitions are in *italics*.
+
+**Resources** 
+
+A *resource* is a generic term used to describe anything you can request and use on the GENi platform. It may include physical machine, virtual maachines, network hardware and more. in the image of *Flack* above, the types of *resources* you can request from GENI are in the dropdown menu in the center of the screen (All types, firewall, etc). 
+
+**Credentials**
+
+Your *credentials* are your keys to using the GENI environment. Once you have GENI *credentials*, you may begin setting up environments, requesting resources, and using the various tools that have been developed for GENI. Your credentials come in the form of a username, SSH key, and a password.
+
+**Flack**
+
+Flack is pictured at the top of this document. It's is a visual tool for setting up experiment environments (known as a *slice*), requesting resources (such as a *sliver*), and setting up network paths between them. **Much of your interfacing with GENI in experiments and examples will be through Flack**. :doc:`You can learn more about using Flack here <../main/tools/flack>`.
+
+**Omni**
+
+Omni is a command-line tool for interacting with GENI. You can allocate resources like you can do with Flack, but without the visual interface. Omni is a powerful utility, which you can :doc:`learn more about here <../main/tools/omni>`.
+
+**Slice**
+
+A *slice* is an environment and conceptual container that your resources reside in. A single *slice* is recognized globally throughout the GENI environment. Within each slice, you can request resources from any GENI authorty. Note that in the image of *Flack* above, A slice named "TestSlice" has been created.
+
+**Sliver**
+
+Up until now, we have referred to the different computing and network components that you allocate within GENI as *resources*. In GENI terminology, these resources are typically called a *slivers*, but it represents that computing resources are often virtualized and shared on a physical machine. In the Image of *Flack* above, you can see the slivers that are going to be allocated for the *slice* named 'TestSlice': 1 Virtual Machine (VM), 1 Physical Machine (PC), and network interfaces to link them (lan0).
+
+**Seattle**
+
+Seattle is another project under the GENI umbrella which allows you allocate virtual machines around the globe and run experiments. Some of these virtual machines reside on physcial machine, host virtual machines, and even mobile devices. Because of the transient connectivity of some devices, it is **very helpful** for simulating what the internet is really like for experiments. You do not need GENI *credentials* to use Seattle. Anyone can sign up.
+
+Additional Resources
+--------------------
+
+This list is a modification of the original GENI glossary available at GENI.net. It has been modified to be of use specifically to developers. You are enouraged, however, to read as deeply into GENI as you see fit.
+
+1. `Geni.net GENI Glossary <http://groups.geni.net/geni/wiki/GeniGlossary>`_
+
+TODO
+----
+
+Perhaps define more succinctly what exactly an *aggregate* is. The term exists on the official GENI glossary, but may be overly broad for the average developer. The same goes for the term *authority*
