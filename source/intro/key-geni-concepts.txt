@@ -3,7 +3,7 @@ Key Terms and Concepts
 
 Before you jump into reading the :doc:`core GENI documentation <../main/index>`, you should become familiar with the terminology used when discussing the project. Because GENI is a recently-developed, global platform, an evolving set of terms is used to described the details.
 
-Throughout the definitions, we'll refer the the figure below for reference. This is *Flack*, the visual interface used to interact with GENI. Flack is described in further detail below and in the :doc:`Flack guide <../main/tools/flack`.
+Throughout the definitions, we'll refer the the figure below for reference. This is *Flack*, the visual interface used to interact with GENI. Flack is described in further detail below and in the :doc:`Flack guide <../main/tools/flack>`.
 
 **Figure 1: Flack**
 

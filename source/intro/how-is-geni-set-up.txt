@@ -1,6 +1,48 @@
 How Is GENI Set Up?
 ===================
 
+For the purposes of this section, the lower-level details of how GENI is set up are spared. The "Additional Resources" section, although, contains a link to a more extensive document authored by the GENI Project Office.
+
+GENI Setup: A Developer's View
+------------------------------
+
+The basic workflow of a developer looking to start building on GENI offers a nice view on the structure of the GENI project. So let's consider Alice, a fictional GENI wannabe-experimenter.
+
+**From the top: Clearinghouse**
+
+In order to start interacting with GENI, Alice need to become a credentialed GENI user. Alice can obtain credentials from a GENI *Clearinghouse*. A GENI Clearing house can issue credentials that are *federated*, meaning that they are recognized by all GENI *Management Authorities*.
+
+**What's in a Management Authority?**
+
+A Management Authority, or Manager, is an organization or institution that makes resources available to experimenters like Alice. These resources are made available via APIs. As a developer, Alice does not have to deal directly with these APIs because of GENI tools that are available to her.
+
+**What Tools?**
+
+Once Alice has GENI credentials, she can use tools like OMNI or Flack. Because Alice wants to dive in quickly, she opts for Flack, the visual web-based option.
+
+Alice wants to start an experiment, so she needs to create an environment for her experiment, called a *slice*. The slice Alice creates via Flack will be recognized throughout by all of the GENI Management Authorities, which supply the resources and *slivers* that she needs.
+
+**What's a Sliver?**
+
+Once Alice has her slice set up, she'll want to request virtual machines from different Managers. The virtual machines, and *any* other resources that Alice might request are collectively referred to as slivers. They are called 'slivers' because they are often virtualized and shared components of a physical machine.
+
+**And that's it**
+
+Now that you have a basic idea of how GENI is set up from a (very) high level, it's best to move on the the more extensive :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
+
+
 Additional Resources
 --------------------
 
+A glossary of the terms italicised in the document are available in the :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
+
+A more encompassing document with lower-level details on GENI architecture is `available here <http://groups.geni.net/geni/attachment/wiki/GeniSysOvrvw/GENI-AnIntroduction-28Feb2012.pdf>`_.
+
+TODO
+----
+
+A diagram would probably go nicely here.
+
+The user will not get creds from a Clearinghosue for Mozilla Ignite. Reconcile.
+
+There are more in-depth details that are left out in this document, primarily regarding the management of aggregates and how that plays into the overall architecture. After some feedback, we'll determine how necessarry those details are.

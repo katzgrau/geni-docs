@@ -30,3 +30,7 @@ GENI refers to both the overall project and the suite of tools and services that
 It's the Side of Hacking You Haven't Been Exposed To
 ----------------------------------------------------
 
+How long have you taken TCP/IP for granted? How long have you build your web applications upon the decades-old work of others? With GENI, you are exposed to a new frontier of hacking.
+
+Read more about :doc:`what you can do with GENI <what-can-i-do-with-geni>`.
+

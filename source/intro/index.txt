@@ -1,5 +1,7 @@
 Introduction
 ============
+
+Let's talk about what you can do with GENI, how GENI is architected, and how you can get started.
  
 **Contents**
 
@@ -9,5 +11,5 @@ Introduction
    what-is-geni
    what-can-i-do-with-geni
    prerequisites
-   key-geni-concepts
    how-is-geni-set-up
+   key-geni-concepts

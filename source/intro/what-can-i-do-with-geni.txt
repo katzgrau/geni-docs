@@ -1,2 +1,34 @@
 What Can I do With GENI?
 ========================
+
+The GENI platform is very open-ended, but it's intended to be an environment for:
+
+- Exploring gigabit networks
+- Implementing new routing rules in those networks
+- Writing application which leverage these networks
+
+Examples
+========
+
+Here are a few project ideas that are possible with GENI tools and resources.
+
+**Write an application that can utilize gigabit connections**
+
+Gigabit internet connections are the future. So what kind of network-reliant applications could you build that aren't possible with the typical consumer internet speeds of today?
+
+**Test how different protocols are affected by network bottlenecks**
+
+If you wanted to compare, for instance, how TCP and UDP perform under different levels of network congestion, you could esily simulate that with GENI
+
+**Build distributed applications**
+
+You have considerable computing and network resources available via GENI, so you can develop and test your next-generation distributed applications over gigabit links.
+
+**Design an alternative to the IP protocol**
+
+Is IP holding you back? Define the rules that a router follows for forwarding packets, and experiment with what *could be* the internet's future backbone protocol.
+
+Going Forward
+=============
+
+Are you ready to dig into GENI? :doc:`Check out the prerequisites <prerequisites>` to make sure you can hit the ground running.
