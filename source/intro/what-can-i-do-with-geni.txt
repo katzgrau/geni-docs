@@ -8,7 +8,7 @@ The GENI platform is very open-ended, but it's intended to be an environment for
 - Writing application which leverage these networks
 
 Examples
-========
+--------
 
 Here are a few project ideas that are possible with GENI tools and resources.
 
@@ -29,6 +29,6 @@ You have considerable computing and network resources available via GENI, so you
 Is IP holding you back? Define the rules that a router follows for forwarding packets, and experiment with what *could be* the internet's future backbone protocol.
 
 Going Forward
-=============
+-------------
 
 Are you ready to dig into GENI? :doc:`Check out the prerequisites <prerequisites>` to make sure you can hit the ground running.
