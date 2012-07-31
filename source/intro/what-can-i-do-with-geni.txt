@@ -5,7 +5,7 @@ The GENI platform is very open-ended, but it's intended to be an environment for
 
 - Exploring gigabit networks
 - Implementing new routing rules in those networks
-- Writing application which leverage these networks
+- Writing applications which leverage these networks
 
 Examples
 --------
