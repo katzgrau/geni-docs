@@ -1,7 +1,7 @@
 What Is GENI?
 =============
 
-GENI is both a project sponsored by the NSF and commonly refers to a number of applications and tools used to build and experiement with high-speed programmable networks. These tools are being developed by various institutions, and the efforts surrounding GENI are still very much **in progress**.
+GENI is both a project sponsored by the NSF and commonly refers to a number of applications and tools used to build and experiment with high-speed programmable networks. These tools are being developed by various institutions, and the efforts surrounding GENI are still very much **in progress**.
 
 A Short Background (Or, What Are the Limitations of the Internet Today?)
 ------------------------------------------------------------------------

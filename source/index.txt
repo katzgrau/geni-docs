@@ -9,7 +9,7 @@ These documents are intended to help software developers become familiar with GE
 - Implementing new routing rules in those networks
 - Writing application which leverage these networks
 
-A major benefit to GENI is that experiments can run "at scale", meaning they just aren't similated in a lab, but can be run on machines that you provision accross the world.
+A major benefit to GENI is that experiments can run "at scale", meaning they just aren't simulated in a lab, but can be run on machines that you provision across the world.
 
 Read on to find out :doc:`why GENI exists <intro/what-is-geni>`.
 

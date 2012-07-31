@@ -6,7 +6,7 @@ For the purposes of this section, the lower-level details of how GENI is set up 
 GENI Setup: A Developer's View
 ------------------------------
 
-The basic workflow of a developer looking to start building on GENI offers a nice view on the structure of the GENI project. So let's consider Alice, a fictional GENI wannabe-experimenter.
+The basic work-flow of a developer looking to start building on GENI offers a nice view on the structure of the GENI project. So let's consider Alice, a fictional GENI wannabe-experimenter.
 
 **From the top: Clearinghouse**
 
@@ -34,7 +34,7 @@ Now that you have a basic idea of how GENI is set up from a (very) high level, i
 Additional Resources
 --------------------
 
-A glossary of the terms italicised in the document are available in the :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
+A glossary of the terms italicized in the document are available in the :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
 
 A more encompassing document with lower-level details on GENI architecture is `available here <http://groups.geni.net/geni/attachment/wiki/GeniSysOvrvw/GENI-AnIntroduction-28Feb2012.pdf>`_.
 
@@ -43,6 +43,6 @@ TODO
 
 A diagram would probably go nicely here.
 
-The user will not get creds from a Clearinghosue for Mozilla Ignite. Reconcile.
+The user will not get creds from a Clearinghouse for Mozilla Ignite. Reconcile.
 
-There are more in-depth details that are left out in this document, primarily regarding the management of aggregates and how that plays into the overall architecture. After some feedback, we'll determine how necessarry those details are.
+There are more in-depth details that are left out in this document, primarily regarding the management of aggregates and how that plays into the overall architecture. After some feedback, we'll determine how necessary those details are.

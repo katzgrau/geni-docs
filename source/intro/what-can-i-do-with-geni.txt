@@ -18,7 +18,7 @@ Gigabit internet connections are the future. So what kind of network-reliant app
 
 **Test how different protocols are affected by network bottlenecks**
 
-If you wanted to compare, for instance, how TCP and UDP perform under different levels of network congestion, you could esily simulate that with GENI
+If you wanted to compare, for instance, how TCP and UDP perform under different levels of network congestion, you could easily simulate that with GENI
 
 **Build distributed applications**
 

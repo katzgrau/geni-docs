@@ -16,7 +16,7 @@ The list of terms below is organized in a way that the items further up on the l
 
 **Resources** 
 
-A *resource* is a generic term used to describe anything you can request and use on the GENi platform. It may include physical machine, virtual maachines, network hardware and more. in the image of *Flack* above, the types of *resources* you can request from GENI are in the dropdown menu in the center of the screen (All types, firewall, etc). 
+A *resource* is a generic term used to describe anything you can request and use on the GENi platform. It may include physical machine, virtual machines, network hardware and more. in the image of *Flack* above, the types of *resources* you can request from GENI are in the drop-down menu in the center of the screen (All types, firewall, etc). 
 
 **Credentials**
 
@@ -32,7 +32,7 @@ Omni is a command-line tool for interacting with GENI. You can allocate resource
 
 **Slice**
 
-A *slice* is an environment and conceptual container that your resources reside in. A single *slice* is recognized globally throughout the GENI environment. Within each slice, you can request resources from any GENI authorty. Note that in the image of *Flack* above, A slice named "TestSlice" has been created.
+A *slice* is an environment and conceptual container that your resources reside in. A single *slice* is recognized globally throughout the GENI environment. Within each slice, you can request resources from any GENI authority. Note that in the image of *Flack* above, A slice named "TestSlice" has been created.
 
 **Sliver**
 
@@ -44,7 +44,7 @@ A *Clearinghouse* is a GENI authority that is capable of signing users up to exp
 
 **Federation**
 
-This is the general idea that once you recieve your GENi credentials from a *Clearinghouse*, you can use them to request resources and slivers anywhere. In visual tools such as *Flack*, this is largely transparent.
+This is the general idea that once you receive your GENi credentials from a *Clearinghouse*, you can use them to request resources and slivers anywhere. In visual tools such as *Flack*, this is largely transparent.
 
 **Management Authority (Authority)**
 
@@ -65,12 +65,12 @@ When a request is made for resources (And an RSpec is sent out), the *Management
 
 **Seattle**
 
-Seattle is another project under the GENI umbrella which allows you allocate virtual machines around the globe and run experiments. Some of these virtual machines reside on physcial machine, host virtual machines, and even mobile devices. Because of the transient connectivity of some devices, it is **very helpful** for simulating what the internet is really like for experiments. You do not need GENI *credentials* to use Seattle. Anyone can sign up.
+Seattle is another project under the GENI umbrella which allows you allocate virtual machines around the globe and run experiments. Some of these virtual machines reside on physical machine, host virtual machines, and even mobile devices. Because of the transient connectivity of some devices, it is **very helpful** for simulating what the internet is really like for experiments. You do not need GENI *credentials* to use Seattle. Anyone can sign up.
 
 Additional Resources
 --------------------
 
-This list is a modification of the original GENI glossary available at GENI.net. It has been modified to be of use specifically to developers. You are enouraged, however, to read as deeply into GENI as you see fit.
+This list is a modification of the original GENI glossary available at GENI.net. It has been modified to be of use specifically to developers. You are encouraged, however, to read as deeply into GENI as you see fit.
 
 1. `Geni.net GENI Glossary <http://groups.geni.net/geni/wiki/GeniGlossary>`_
 
@@ -79,4 +79,4 @@ TODO
 
 Perhaps define more succinctly what exactly an *aggregate* is. The term exists on the official GENI glossary, but may be overly broad for the average developer. The same goes for the term *authority*
 
-For the purposes of Mozilla Ignite, users will not really need to know about other clearinghouses aside formt he one their credentials came though. Keep this in mind for the Clearinghouse definition, which is marked with a TODO.
+For the purposes of Mozilla Ignite, users will not really need to know about other clearinghouses aside from the one their credentials came through. Keep this in mind for the Clearinghouse definition, which is marked with a TODO.
