@@ -1,4 +1,4 @@
 Example 1 - Ping
 ================
 
-In this short experiment you'll ...
+In this short experiment you'll learn how to set up 2 virtual machines that can ping each other on the GENI platform.

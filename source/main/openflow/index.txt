@@ -1,0 +1,9 @@
+Programmable Networks
+=====================
+
+One of the most exciting aspects of GENI is that you are capable of experimenting with OpenFlow too. OpenFlow is a platform for writing the routing rules that routers follow. You can use this in your experiments.
+
+**Contents**
+
+.. toctree::
+   :maxdepth: 1

@@ -3,6 +3,11 @@ What You Need to Know Before Starting
 
 Before you dive into using GENI, there are a few concepts that you should be familiar with beforehand. A good grip on these concepts will ensure that you can follow along with various GENI tutorials, examples, and videos.
 
+GENI Credentials
+----------------
+
+You'll need GENI credentials before you can start experimenting. :doc:`Click here to find out how to get set up with those <../setup/get-your-geni-credentials>`.
+
 Virtual Machines
 ----------------
 
