@@ -1,2 +1,4 @@
-Example 1 (Placeholder)
-=======================
+Example 1 - Ping
+================
+
+In this short experiment you'll ...
