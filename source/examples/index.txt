@@ -6,4 +6,4 @@ Examples
 .. toctree::
    :maxdepth: 1
 
-   Ping Example <example-1.txt>
+   Set Up 2 VMs and Get Them to Talk <example-1.txt>
