@@ -83,19 +83,72 @@ Now, drag another VM onto the pane:
 
 .. image:: ../assets/images/flack-new-vm-2.png
 
-Lastly, drag a line between the two VMs, and click "Submit" on the bottom:
+Lastly, drag a line between the two VMs, and click "Submit" on the bottom. Keep in mind, the 'lan0' device in the figure below will appear automatically.
 
 .. image:: ../assets/images/flack-link-nodes.png
 
-At this point, you have two virtual machines on the GENI platform that are being provisioned. These two VMs are networked, and will have aliases in their hosts file which point to each other.
+At this point, you have two virtual machines on the GENI platform that are being provisioned. These two VMs are networked, and will have aliases in their hosts file which point to each other. **In other words, from this visual tool (Flack), you created two real virtual machines that are networked with each other on GENI.**
+
+When your VMs are ready, the background color of the right pane will be light green, as below.
+
+.. image:: ../assets/images/flack-vm-ready.png
 
 Step 6. Send A Ping From One Node to the Other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+At the last step in Step 5, you should see the connection info for each node listed to the right of it. For example, the hostname and port of the nodes in the example are.
 
+- **VM**: Host ``pc533.emulab.net`` port ``31290``
+- **VM-0**: Host ``pc533.emulab.net`` port ``31291``
+
+If I open a terminal window, I should be able to connect to both without using a password:
+
+**Logging into VM**
+
+.. image:: ../assets/images/ex1-login1.png
+
+**Logging into VM-0**
+
+.. image:: ../assets/images/ex1-login1.png
+
+As mentioned before, the hosts are already networked, and conveniently, there are already hosts for the appropriate IPs for VM and VM-0 in each host file:
+
+.. image:: ../assets/images/ex1-cat-hosts.png
+
+At this point, we're ready to ``ping`` one host from the other. Open the window for machine VM and type:
+
+::
+	
+	ping VM-0
+
+You should see something very similar to:
+
+.. image:: ../assets/images/ex1-ping.png
+
+If you did, congratulation! You've just confirmed your two new GENI VMs can talk to each other! If you're a bit handy with client/server apps, what might you be able to code up at this point?
+
+If things didn't go so well, see the troubleshooting section below and see if you can address any issues.
+
+Troubleshooting
+---------------
+
+Did this experiment fail to go as planned? Ping kenny at mozillafoundation dot org and share the details. Or, see if your problem can be addressed below.
+
+I clicked 'Submit' to create my machines, but there was an error
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Occasionally a request to provision machines cannot be fulfilled. You can always try:
+
+- Submitting the request again
+- Trying to provision machines from a different management authority
+
+I can't log into my machines via SSH
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Double check that your public SSH key (usually on your computer at something similar to ~/.ssh/id_rsa.pub) is registered with your Management Authority user account. When your machines are provisioned by GENI, your public key will be placed in the ~/.ssh/authorized_keys file on each host so you will have a password-less login.
 
 TODO
 ----
 
-Step 1 references something that probably won't be necessary in the future.
-Step 4 references something that probably won't be allowable for US Ignite Challenge.
+- Step 1 references something that probably won't be necessary in the future.
+- Step 4 references something that probably won't be allowable for US Ignite Challenge.

@@ -1,2 +1,9 @@
 GENI Quick Start
 ================
+
+[More to come]
+
+TODO
+----
+
+Open question: The combination of getting your GENI credentials and :doc:`Example #1 <../examples/example-1>` constitutes a nice quick start. Is it worth regurgitating something again, or simply directing the user in an organized manner here?
