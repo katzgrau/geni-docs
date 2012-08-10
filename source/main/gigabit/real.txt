@@ -1,0 +1,5 @@
+Real Gigabit Speeds
+===================
+
+Note: It doesn't always work
+Note: If you let Flack sit open for a while, it seems things get out of sync

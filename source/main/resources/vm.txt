@@ -1,2 +1,5 @@
 Virtual Machines
 ================
+
+Of the two computing resources you'll have available to you on GENI, Virtual Machines are one of them. They are most often referred to as "VM" or "VMs" in documentation and software tools.
+

@@ -1,0 +1,6 @@
+Delay Node
+==========
+
+A delay node is a type of resource with can simulate a data transfer bottleneck. This can be handy for running experiments that would ideally have some set speed of data transfer as opposed to whatever the network is capable of.
+
+For instance, let's say you are running a GENI experiment on a single site, where the inter-node data transfer speeds are 1000 Mbps. If you're running an experiment that tests protocols, it might make sense to run the experiment over different qualities of 

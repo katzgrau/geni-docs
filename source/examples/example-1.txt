@@ -119,9 +119,9 @@ At this point, we're ready to ``ping`` one host from the other. Open the window 
 
 ::
 	
-	ping VM-0
+	ping -c 2 VM-0
 
-You should see something very similar to:
+This will ping VM-0 twice. The ``-c`` flag allows us to limit the number of pings to 2. You should see something very similar to:
 
 .. image:: ../assets/images/ex1-ping.png
 
@@ -145,7 +145,7 @@ Occasionally a request to provision machines cannot be fulfilled. You can always
 I can't log into my machines via SSH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Double check that your public SSH key (usually on your computer at something similar to ~/.ssh/id_rsa.pub) is registered with your Management Authority user account. When your machines are provisioned by GENI, your public key will be placed in the ~/.ssh/authorized_keys file on each host so you will have a password-less login.
+Double check that your public SSH key (usually on your computer at something similar to ``~/.ssh/id_rsa.pub``) is registered with your Management Authority user account. When your machines are provisioned by GENI, your public key will be placed in the ``~/.ssh/authorized_keys`` file on each host so you will have a password-less login.
 
 TODO
 ----

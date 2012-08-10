@@ -10,3 +10,4 @@ A big capability of GENI is supporting experiments over high-speed gigabit netwo
 
    pc
    vm
+   delay
