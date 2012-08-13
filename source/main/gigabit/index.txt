@@ -7,3 +7,6 @@ What kind of resources do you generally have available to you with GENI? This se
 
 .. toctree::
    :maxdepth: 1
+
+   real
+   simulation

@@ -1,0 +1,57 @@
+Example 2 - Set Up 2 Machines with a Gigabit Link
+=================================================
+
+One of the most exciting parts of using the GENI platform is having access to a gigabit backbone. In this tutorial, we're going to set up two networked machines just like we did in :doc:`Example 1 <example-1>`, but we're going to do two things differently:
+
+- Set up a gigabit link between the two machines
+- Set up the machines in different parts of the country
+  
+  - One in Utah
+  - One in Washington DC
+
+Consideration Before Proceeding
+-------------------------------
+
+**Important:** Because GENI is a shared platform, it's your responsibility as a developer to be mindful of the resources you are requesting. The resources for gigabit networks are limited, so you are encouraged to release those resources as soon as you are finished using them. This will make them available to other developers and experimenters.
+
+It's also highly recommended that you complete the :doc:`first GENI example<example-1>` before beginning this one. This tutorial may reference introductory concepts that were explained previously.
+
+Tutorial
+--------
+
+Step 1. Log In to Your Management Authority
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's start by logging into your management authority if you aren't already authenticated.
+
+.. image:: ../assets/images/geni-ma-login.png
+
+Step 2. Open Flack In A New Tab
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Next, we'll open Flack in a new browser window or tab: http://www.protogeni.net/trac/protogeni/wiki/Flack .
+
+**Figure 2: Flack Initialized**
+
+.. image:: ../assets/images/flack-init.png
+
+Step 3. Log In With Flack
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As we had done previously, choose the correct management authority if it isn't already selected along the top of flack. Click the "download" button to have your keys loaded, and enter you password.
+
+When prompted to select where to list resources from, leave all of the options checked and click "Continue".
+
+Step 4. Let's Look At Our Gigabit Backbones
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's take a look at the map that is displayed when the authority list loading is complete. Do you see the pink lines running across the map? Those are **gigabit backbones** that are available to use.
+
+In order to utilize a gigabit backbone, we'll provision a machine at both ends of it. In this example, one end will be in Utah and the other will be in Washington DC.
+
+In the image below, the Utah aggregate is black and has the number "633" on it. Washington DC is grey and has "136" on top of it.
+
+**Note:** Because those number denote the number of slivers available in those aggregates, the number fluctuates, and is likely different at the time that you are reading this.
+
+.. image:: ../assets/images/flack-map.png
+

@@ -7,3 +7,4 @@ Examples
    :maxdepth: 1
 
    Set Up 2 VMs and Get Them to Talk <example-1.txt>
+   Set Up A Multi-site, Gigabit Network <example-2.txt>

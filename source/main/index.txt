@@ -6,7 +6,7 @@ Core Documentation
 .. toctree::
    :maxdepth: 1
 
-   Tools: For Building Apps <tools/index>
-   Provision: Machines and Networks <resources/index>
-   Link: Gbps Data Transmission <gigabit/index>
-   Route: Programming the Network <openflow/index>
+   Tools For Building Apps <tools/index>
+   Provision Machines and Networks <resources/index>
+   Gigabit Data Transmission <gigabit/index>
+   Programming the Network <openflow/index>
