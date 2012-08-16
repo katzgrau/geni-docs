@@ -19,6 +19,8 @@ It's also highly recommended that you complete the :doc:`first GENI example<exam
 Tutorial
 --------
 
+The steps of this tutorial are very similar to the last tutorial, up until step number 4.
+
 Step 1. Log In to Your Management Authority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -55,3 +57,34 @@ In the image below, the Utah aggregate is black and has the number "633" on it. 
 
 .. image:: ../assets/images/flack-map.png
 
+Step 5. Create a New Slice
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's create a new slice for our gigabit experiment to live in. Give your slice a different name than the one in the figure below.
+
+.. image:: ../assets/images/ex2-flack-new-slice.png
+
+Click "Ok" and wait for your slice to initialize. When it's done, you will see:
+
+.. image:: ../assets/images/ex2-flack-slice.png
+
+Step 5. Set Up Two Machines and A Gigabit Link
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Just as before, we're at the fun part of the experiment. Let's go hunting for a machine that's hooked up to the Gigabit backbone in Utah. Click on the Map panel in the left part of the screen:
+
+.. image:: ../assets/images/ex2-flack-slice-to-map.png
+
+Click on the Utah aggregate. You'll see a box pop up with a breakdown of the different authorities in that grouping. For these tutorials, we'll stick with Utah/emulab, since they have the most resources available at the time of this writing.
+
+.. image:: ../assets/images/ex2-flack-aggregate-breakdown.png
+
+Click on the box labeled "utahemulab.cm" to see the list of resources available. You'll see:
+
+.. image:: ../assets/images/ex2-utah-resource-list.png
+
+Our goal here is to find a PC hooked up to a gigabit interface, which will be labeled in the right pane as "1 Gb/s (...)". Find one, like we did in the figure below. 
+
+.. image:: ../assets/images/ex2-utah-gig-resource.png
+
+**Note:** It's possible, but not highly likely, that all gig resources are unavailable, in which case they'll have a red "x" in front of them instead of a checkmark. In this case, you may need to find another utahemulab.cm grouping on the map which has a gigabit-linked PC available.
