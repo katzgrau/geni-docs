@@ -68,7 +68,7 @@ Click "Ok" and wait for your slice to initialize. When it's done, you will see:
 
 .. image:: ../assets/images/ex2-flack-slice.png
 
-Step 5. Set Up Two Machines and A Gigabit Link
+Step 6. Set Up Two Machines and A Gigabit Link
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Just as before, we're at the fun part of the experiment. Let's go hunting for a machine that's hooked up to the Gigabit backbone in Utah. Click on the Map panel in the left part of the screen:
@@ -85,6 +85,6 @@ Click on the box labeled "utahemulab.cm" to see the list of resources available.
 
 Our goal here is to find a PC hooked up to a gigabit interface, which will be labeled in the right pane as "1 Gb/s (...)". Find one, like we did in the figure below. 
 
-.. image:: ../assets/images/ex2-utah-gig-resource.png
+.. image:: ../assets/images/ex2-gig-resource.png
 
 **Note:** It's possible, but not highly likely, that all gig resources are unavailable, in which case they'll have a red "x" in front of them instead of a checkmark. In this case, you may need to find another utahemulab.cm grouping on the map which has a gigabit-linked PC available.
