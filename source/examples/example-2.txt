@@ -53,7 +53,7 @@ In order to utilize a gigabit backbone, we'll provision a machine at both ends o
 
 In the image below, the Utah aggregate is black and has the number "633" on it. Washington DC is grey and has "136" on top of it.
 
-**Note:** Because those number denote the number of slivers available in those aggregates, the number fluctuates, and is likely different at the time that you are reading this.
+**Note:** Because those numbers denote the number of slivers available in those aggregates, the number fluctuates, and is likely different at the time that you are reading this.
 
 .. image:: ../assets/images/flack-map.png
 
@@ -68,7 +68,7 @@ Click "Ok" and wait for your slice to initialize. When it's done, you will see:
 
 .. image:: ../assets/images/ex2-flack-slice.png
 
-Step 6. Set Up Two Machines and A Gigabit Link
+Step 6. Find A Machine With A Gigabit Link
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Just as before, we're at the fun part of the experiment. Let's go hunting for a machine that's hooked up to the Gigabit backbone in Utah. Click on the Map panel in the left part of the screen:
@@ -88,3 +88,59 @@ Our goal here is to find a PC hooked up to a gigabit interface, which will be la
 .. image:: ../assets/images/ex2-gig-resource.png
 
 **Note:** It's possible, but not highly likely, that all gig resources are unavailable, in which case they'll have a red "x" in front of them instead of a checkmark. In this case, you may need to find another utahemulab.cm grouping on the map which has a gigabit-linked PC available.
+
+Now that you've found a machine with a gigabit link, drag that top-level window off to the side, and bring your slice pane back up by clicking on the name of your slice on the left side.
+
+.. image:: ../assets/images/ex2-back-to-slice.png
+
+Click into your slice, and drag that resource window over to the left so you can see your pane:
+
+.. image:: ../assets/images/ex2-slice-gig-prep.png
+
+Drag the Gigabit PC we found over to the pane, like so:
+
+.. image:: ../assets/images/ex2-resource-in-slice.png
+
+Step 7. Find Another Machine With A Gigabit Link
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We've now got a machine in Utah ready to go in our Gigabit setup. But now we need a machine on the *other* end of a network link. Back to the map!
+
+.. image:: ../assets/images/ex2-flack-slice-to-map.png
+
+It was our stated intention at the beginning of this example to get a link going from Utah to Washington DC. As mentioned before, resources on GENI are limited, and it's possible that resources aren't available in DC when you run this experiment. If that turns out to be the case, **pick another grouping of resources on the map that have a pink line running from Utah**.
+
+So let's look at Washington DC's grouping of resources, since the pink line representing a gigabit link runs directly from Utah.
+
+.. image:: ../assets/images/ex2-dc-resources.png
+
+We can see in the figure above that we have 8 resources for our use in utahemulab.cm. Click into that, and you'll likely see something similar to the figure below.
+
+.. image:: ../assets/images/ex2-dc-gigs.png
+
+Remote computing resources are prefixed with "pg" as opposed to "pc" like we saw in Utah. pg40 in the figure above is hooked up to a gigabit link — just what we need! We'll take the one resource available in the window above, and drag it to our slice as before.
+
+At this point, our Utah and DC machines should be sitting in our slice:
+
+.. image:: ../assets/images/ex2-slice-interm.png
+
+Step 8. Set Up a Gigabit Network!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We're now ready to hook up our network. Toward the upper left part of the slice pane, a LAN resource is available for us to drag into the slice.
+
+**Before:**
+
+.. image:: ../assets/images/ex2-lan-before.png
+
+
+**After:**
+
+.. image:: ../assets/images/ex2-lan-after.png
+
+
+
+
+
+
+
