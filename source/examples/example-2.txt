@@ -133,14 +133,28 @@ We're now ready to hook up our network. Toward the upper left part of the slice 
 
 .. image:: ../assets/images/ex2-lan-before.png
 
-
 **After:**
 
 .. image:: ../assets/images/ex2-lan-after.png
 
+From here, drag a line **from** each machine to the lan. Your final lan should look like:
 
+.. image:: ../assets/images/ex2-gig-lan.png
 
+This is all very similar to how we set up our network in example 1. However, **this time we need to explicitly set the speed of the lan to be 1 Gb/s.**
 
+Click the blue "i", or "information" icon on the lan. The information pane for the lan will appear. We want to change the *properties* of the lan, so we'll click on the "properties" tab:
 
+.. image:: ../assets/images/ex2-gig-lan-info.png
 
+In the capacity field, enter "1000000". The unit of the capacity field is in kb/s, so we enter one million to specify 1 gb/s.
 
+.. image:: ../assets/images/ex2-lan-props.png
+
+Click "Apply" at the bottom of the screen. If you've made it this far, congratulations! It's time to provision your gigabit network! Click "Submit" at the bottom of the slice pane, and confirm.
+
+**Note: This can sometimes be a process that takes up to 15 minutes, and it occasionally fails or hangs. If it does fail, you may try again until it succeeds.** If it continues to fail, it may be possible that your resource was granted to another experimenter while you were setting up your lan. You can click the "refresh" icon above the "Managers" list ont he far left side of Flack to get the latest resource lists.
+
+.. image:: ../assets/images/ex2-gig-lan-submit.png
+
+TODO: Install http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz
