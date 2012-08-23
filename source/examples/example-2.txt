@@ -153,8 +153,122 @@ In the capacity field, enter "1000000". The unit of the capacity field is in kb/
 
 Click "Apply" at the bottom of the screen. If you've made it this far, congratulations! It's time to provision your gigabit network! Click "Submit" at the bottom of the slice pane, and confirm.
 
-**Note: This can sometimes be a process that takes up to 15 minutes, and it occasionally fails or hangs. If it does fail, you may try again until it succeeds.** If it continues to fail, it may be possible that your resource was granted to another experimenter while you were setting up your lan. You can click the "refresh" icon above the "Managers" list ont he far left side of Flack to get the latest resource lists.
+**Note: This can sometimes be a process that takes up to 15 minutes, and it occasionally fails or hangs. If it does fail, you may try again until it succeeds.** If it continues to fail, it may be possible that your resource was granted to another experimenter while you were setting up your lan. You can click the "refresh" icon above the "Managers" list on the far left side of Flack to get the latest resource lists.
 
 .. image:: ../assets/images/ex2-gig-lan-submit.png
 
-TODO: Install http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz
+When your new machines and networks have been provisioned, you'll see a green background:
+
+.. image:: ../assets/images/ex2-lan-ready.png
+
+**Author's Note:** In the process of setting this up, I did in fact run into the provisioning failure I said might happen. You'll notice that I had to replace pc236, which was no longer available, with pc500 from the same Utah grouping.
+
+You now have a full provisioned Gigabit lan!
+
+Step 9. Log in to the machines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's now open two terminals windows - one for each box we've provisioned, and one for an SSH tunnel that we'll need. Let's start with logging into the box prefixed with **pc**. You should specify the address of the pc, and be sure to include the port number of needed with the ``-p`` flag.
+
+**Note:** At the same time we're going to log into the first box, we'll set up an SSH tunnel that we can use to log into the other box. pg40 is a remote node, and we won't be able to access it directly.
+
+Your SSH login command should look like::
+
+	ssh -p [pc 1 port] [pc 1 host] -L 2224:[pc 2 host]:[pc 2 ssh port]
+
+So with the machines we've been working with, we'll do just that:
+
+.. image:: ../assets/images/ex2-login-1.png
+
+Great. Now for logging into the second box (prefixed 'pg'). Since we have a tunnel open on port 2224 locally, we'll connect to that. You can type the same exact command verbatim::
+
+	$ ssh -p 2224 127.0.0.1
+
+.. image:: ../assets/images/ex2-login-2.png
+
+Step 10. Install iperf
+~~~~~~~~~~~~~~~~~~~~~~
+
+Now, let's check our network connection. Run this in the terminal with the connection to the machine prefixed with **pc**::
+
+	$ cat /etc/hosts
+
+You'll see something similar to:
+
+.. image:: ../assets/images/ex2-cat-hosts.png
+
+The line highlighted in the image above is the alias to the remote host. It will be prefixed by **pg**. Let's keep that in mind.
+
+Next, run this command in the window with the **pc** prefix. This will download and install iperf::
+
+	$ wget http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz && tar -xf iperf-3.0b4.tar.gz && cd iperf-3.0b4 && ./configure && make && sudo make install ; cd
+
+You'll see something similar to::
+
+	[katzgrau@pc500 ~]$ wget http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz && tar -xf iperf-3.0b4.tar.gz && cd iperf-3.0b4 && ./configure && make && sudo make install ; cd
+	--2012-08-23 14:31:23--  http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz
+	Resolving iperf.googlecode.com... 173.194.79.82, 2607:f8b0:400e:c01::52
+	Connecting to iperf.googlecode.com|173.194.79.82|:80... connected.
+	HTTP request sent, awaiting response... 200 OK
+	Length: 309547 (302K) [application/x-gzip]
+	Saving to: `iperf-3.0b4.tar.gz.1'
+
+	100%[========>] 309,547     1.31M/s   in 0.2s    
+
+	2012-08-23 14:31:23 (1.31 MB/s) - `iperf-3.0b4.tar.gz.1' saved [309547/309547]
+
+	checking for a BSD-compatible install... /usr/bin/install -c
+	checking whether build environment is sane... yes
+	checking for a thread-safe mkdir -p... /bin/mkdir -p
+	checking for gawk... gawk
+	[truncated for brevity]
+	make[2]: Leaving directory `/users/katzgrau/iperf-3.0b4'
+	make[1]: Leaving directory `/users/katzgrau/iperf-3.0b4'
+
+Great! We've just installed iperf on our first box.
+
+Open a new, temporary terminal window. Copy and paste this command::
+
+	wget http://iperf.googlecode.com/files/iperf-3.0b4.tar.gz && scp -P 2224 iperf-3.0b4.tar.gz 127.0.0.1:~/
+
+This will download iperf, and send it to our box in DC, pg40.
+
+Lastly, open the terminal tab of the box prefixed with **pg**. Run::
+
+	tar -xf iperf-3.0b4.tar.gz && cd iperf-3.0b4 && ./configure && make && sudo make install ; cd
+
+You now have iperf installed on both machines!
+
+Step 11. Run iperf
+~~~~~~~~~~~~~~~~~~
+
+In the terminal window that is connected to pgXXX, start the iperf server::
+
+	$ /usr/local/bin/iperf3 -s
+
+You'll see something similar to:
+
+.. image:: ../assets/images/ex2-iperf-server.png
+
+In the terminal window that is connected to pcXXX, kick off the iperf client. Be sure to enter the appropriate host for your experiment::
+
+	$ /usr/local/bin/iperf3 -c
+
+.. image:: ../assets/images/ex2-iperf-client.png
+
+Awesome! You've just gigabit data transfer from Utah to DC!
+
+In the figure above, we can see that data was transferred at about 300 Mbits/s. That data transfer was over TCP, which is slower than UDP due to its mechanisms for avoiding data loss. We'd test with UDP, but at the time of this writing, the ``-u`` flag for iperf3 is broken!
+
+Imagine the possibilities. You have a gigabit network to play on. What could you hack on, or create?
+
+**But remember:** If you don't need the resources you provisioned right now, it's better that you delete your machines/slivers and release them into the pool of available resources for other hackers and experimenters.
+
+Lastly, if you found yourself tripped up by any part of this tutorial, be sure to reach out to katzgrau@gmail.com with feedback or questions.
+
+TODO
+----
+
+The reason we bent over backwards to install iperf manually is that the existing ``-u`` switch for iperf is broken. See: http://code.google.com/p/iperf/issues/detail?id=36
+
+Until that's fixed and we can just rely on ``yum``, we'll keep it this way.
