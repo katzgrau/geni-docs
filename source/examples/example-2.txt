@@ -9,8 +9,8 @@ One of the most exciting parts of using the GENI platform is having access to a 
   - One in Utah
   - One in Washington DC
 
-Consideration Before Proceeding
--------------------------------
+Considerations Before Proceeding
+--------------------------------
 
 **Important:** Because GENI is a shared platform, it's your responsibility as a developer to be mindful of the resources you are requesting. The resources for gigabit networks are limited, so you are encouraged to release those resources as soon as you are finished using them. This will make them available to other developers and experimenters.
 
