@@ -1,6 +1,6 @@
 # The GENI Developer Docs (Source Code)
 
-This is the source tree for the documentation for the GENI platform &minus; a platform sponsored by the National Science Foudnation and in partnership with Mozilla Ignite. These docs can be viewed in HTML and PDF form at: [Read The Docs](http://geni-app-developer-documentation.readthedocs.org/en/latest/index.html).
+This is the source tree for the documentation for the GENI platform &minus; a platform sponsored by the National Science Foundation and in partnership with Mozilla Ignite. These docs can be viewed in HTML and PDF form at: [Read The Docs](http://geni-app-developer-documentation.readthedocs.org/en/latest/index.html).
 
 ## Building Locally
 
