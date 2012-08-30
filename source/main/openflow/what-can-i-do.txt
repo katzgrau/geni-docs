@@ -1,0 +1,12 @@
+What Can I Do With OpenFlow?
+============================
+
+OpenFlow is the leading architecture of Software Defined Networking (SDN). It allows you to alter the routing rules of a compatible switch by giving you access to the *control plane*, or the part of the switch that decides how traffic is handled.
+
+Examples of what you might do with OpenFlow:
+
+- Set up packet forwarding so your switch acts as a bridge
+- Direct traffic using one layer 2 protocol to one network, and traffic on an experimental protocol to another network
+- Completely rewrite how network traffic is directed, effectively writing your own protocols
+
+Keep reading to find out :doc:`how you can get started with OpenFlow on the GENI network <openflow-on-geni>`.

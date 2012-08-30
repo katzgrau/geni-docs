@@ -1,0 +1,26 @@
+OpenFlow Basics
+===============
+
+**Note:** This is a computer networking-focused document. It's expected that you have basic knowledge of computer network architecture as specified in the :doc:`../../intro/prerequisites`.
+
+Introduction
+------------
+
+There is sometimes a need for network engineers (or developers like you) to define the behavior of their networks in a custom manner. For example, the architect may want a network switch where they can control how packets are routed, or even define a custom protocol.
+
+Historically, this was possible via closed, proprietary switches were are sometimes prohibitively expensive for researchers and experimenters. Yet, the need for this functionality exists in order to run wide-scale projects implementing new, experimental protocols and routing rules.
+
+OpenFlow is an API that a growing number of switch manufacturers (`like HP and its Procurve switch <http://www.openflow.org/wp/switch-hp/>`_) are implementing, and it's the leading architecture for `Software defined Networking (SDN) <http://en.wikipedia.org/wiki/Software_Defined_Networking>`_. 
+
+OpenFlow is also implemented by Open vSwitch, a software-based switch you can install on an ordinary machine.
+
+On the GENI network, you can request access to a physical OpenFlow-enabled Procurve, or simply install Open vSwitch on a machine and configure it from there.
+
+Before going much further, you may want to know: :doc:`What exactly can I do with OpenFlow <what-can-i-do>`?
+
+Additional Resources
+====================
+
+- HP ProCurve Product Page: http://www.openflow.org/wp/switch-hp/
+- OpenFlow Whitepaper: http://www.openflow.org/documents/openflow-wp-latest.pdf
+- OpenFlow API Spec: http://www.openflow.org/documents/openflow-spec-v1.1.0.pdf

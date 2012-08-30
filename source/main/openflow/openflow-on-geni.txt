@@ -1,0 +1,25 @@
+OpenFlow on GENI
+================
+
+There are a few different ways to start experimenting with OpenFlow on the GENI network:
+
+1. Install Open vSwitch on a standard GENI node
+2. Request access to the GENI Mesoscale Infrastructure
+3. Reserve one of the HP Switches in the GENI environment and install OpenFlow
+
+Installing Open vSwitch
+-----------------------
+
+The preferred method for experimenters looking to play with OpenFlow is option #1. Open vSwitch is a software package which you can install on an ordinary node and have it act as a switch which implements OpenFlow.
+
+This is also the easiest option with the lowest barrier to entry. The third tutorial, :doc:`Programming Networks with OpenFlow <../../examples/example-3>` will walk you through the exact steps required to make this work.
+
+Using the GENI Mesoscale Infrastructure
+---------------------------------------
+
+TODO: Hand of interest in this to help@geni.net
+
+Reserve an HP Switch and install OpenFlow
+-----------------------------------------
+
+TODO: Include this option? Seems *very* advanced for the average developer just looking to hack.
