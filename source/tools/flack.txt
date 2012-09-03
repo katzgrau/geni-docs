@@ -1,11 +1,39 @@
 Flack
 =====
 
-Flack is a visual tool 
+Flack is a visual tool that you can use to provision and network machines on GENI. It's similar to :doc:`omni <omni>` in terms of capability, however omni is a command-line tool that provides a wider range of abilities.
 
-https://www.protogeni.net/trac/protogeni/wiki/GeniTutorial
+Because of it's low barrier to entry, Flack is the preferred tool for getting developers up and running quickly, and the :doc:`example GENI projects <../examples/index>` use it exclusively.
 
-Topics
+This document will go over the different features of Flack that may not have been touched in the examples.
 
-- Network interfaces
-- 
+
+Logging In to Flack
+-------------------
+
+Lorem ipsum
+
+Creating a Slice
+----------------
+
+Lorem ipsum
+
+Looking For Resources
+---------------------
+
+Lorem ipsum
+
+Configuring Compute Resources
+-----------------------------
+
+Lorem ipsum
+
+Configuring Network Resources
+-----------------------------
+
+Lorem ipsum
+
+Dealing with Failures
+---------------------
+
+Lorem ipsum

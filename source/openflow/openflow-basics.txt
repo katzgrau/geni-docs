@@ -6,15 +6,15 @@ OpenFlow Basics
 Introduction
 ------------
 
-There is sometimes a need for network engineers (or developers like you) to define the behavior of their networks in a custom manner. For example, the architect may want a network switch where they can control how packets are routed, or even define a custom protocol.
+There is sometimes a need for network architects (or developers like you) to define the behavior of their networks in a custom manner. For example, the architect may want a network switch where they can control how packets are routed, or even define a custom protocol.
 
-Historically, this was possible via closed, proprietary switches were are sometimes prohibitively expensive for researchers and experimenters. Yet, the need for this functionality exists in order to run wide-scale projects implementing new, experimental protocols and routing rules.
+Historically, this was possible via closed, proprietary hardware that can be prohibitively expensive or impossible to obtain by researchers and experimenters. Yet, the need for this functionality exists in order to run wide-scale projects implementing new, experimental protocols, or even routing rules for basic network architecture needs.
 
-OpenFlow is an API that a growing number of switch manufacturers (`like HP and its Procurve switch <http://www.openflow.org/wp/switch-hp/>`_) are implementing, and it's the leading architecture for `Software defined Networking (SDN) <http://en.wikipedia.org/wiki/Software_Defined_Networking>`_. 
+OpenFlow is an API that a growing number of switch manufacturers (`like IBM, or HP and its Procurve switch <http://www.openflow.org/wp/switch-hp/>`_) are implementing, and it's the leading architecture for `Software defined Networking (SDN) <http://en.wikipedia.org/wiki/Software_Defined_Networking>`_. **It's an open API that allows external software to define the routing rules, or "control plane" of routing hardware.**
 
 .. only:: html
 
-	Igor Gashinsky gives an excellent overview of SDN and OpenFlow in the video below
+	Igor Gashinsky gives an excellent overview on the need for SDN from an industry perspective below, but also illustrates the need to separate the control plane of a switch from the physical hardware.
 
 	.. raw:: html
 	
