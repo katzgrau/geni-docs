@@ -1,6 +1,8 @@
-Programming Networks with OpenFlow
-==================================
+Example 3 - Programming Networks with OpenFlow
+==============================================
 
 The full "what and why" of OpenFlow is discussed in the :doc:`core documentation <../openflow/index>`, but the reason you would want to use OpenFlow is to program how exactly your network behaves. For example, maybe you want to write a custom protocol and segment traffic in your network. Maybe you simply want to play around with a programmable switch.
 
 OpenFlow is the leading architecture of Software Defined Networking (SDN), which is shaping up to be the future of deeply programmable networks.
+
+In this experiment 
