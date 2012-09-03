@@ -12,6 +12,14 @@ Historically, this was possible via closed, proprietary switches were are someti
 
 OpenFlow is an API that a growing number of switch manufacturers (`like HP and its Procurve switch <http://www.openflow.org/wp/switch-hp/>`_) are implementing, and it's the leading architecture for `Software defined Networking (SDN) <http://en.wikipedia.org/wiki/Software_Defined_Networking>`_. 
 
+.. only:: html
+
+	Igor Gashinsky gives an excellent overview of SDN and OpenFlow in the video below
+
+	.. raw:: html
+	
+		<iframe src="http://player.vimeo.com/video/31175672?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/31175672">Igor Gashinksy of Yahoo! At OpenFlow Symposium</a> from <a href="http://vimeo.com/sfoskett">Stephen Foskett</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
 OpenFlow is also implemented by Open vSwitch, a software-based switch you can install on an ordinary machine.
 
 On the GENI network, you can request access to a physical OpenFlow-enabled Procurve, or simply install Open vSwitch on a machine and configure it from there.
