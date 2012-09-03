@@ -1,5 +1,5 @@
 Example 1 - Set Up 2 VMs and Ping 
-===============================
+=================================
 
 In this short experiment you'll learn how to set up 2 virtual machines that can ping each other on the GENI platform. You'll need to get :doc:`GENI credentials <../setup/get-your-geni-credentials>` before you can complete this example.
 
@@ -11,7 +11,7 @@ If you run into any problems with this tutorial, reach out to kenny at mozillafo
 Step 1. Log In to Your Management Authority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For this tutorial we're going to use :doc:`Flack <../main/tools/flack>`, the browser-based visual tool for interacting with GENI. The easiest was to authenticate with Flack is to simply be logged in to your management authorities' website in one window or tab, and to have Flack open in another window or tab.
+For this tutorial we're going to use :doc:`Flack <../tools/flack>`, the browser-based visual tool for interacting with GENI. The easiest was to authenticate with Flack is to simply be logged in to your management authorities' website in one window or tab, and to have Flack open in another window or tab.
 
 **Figure 1: Logging in to a management authority (yours may differ)**
 

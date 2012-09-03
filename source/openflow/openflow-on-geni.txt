@@ -12,7 +12,7 @@ Installing Open vSwitch
 
 The preferred method for experimenters looking to play with OpenFlow is option #1. Open vSwitch is a software package which you can install on an ordinary node and have it act as a switch which implements OpenFlow.
 
-This is also the easiest option with the lowest barrier to entry. The third tutorial, :doc:`Programming Networks with OpenFlow <../../examples/example-3>` will walk you through the exact steps required to make this work.
+This is also the easiest option with the lowest barrier to entry. The third tutorial, :doc:`Programming Networks with OpenFlow <../examples/example-3>` will walk you through the exact steps required to make this work.
 
 Using the GENI Mesoscale Infrastructure
 ---------------------------------------

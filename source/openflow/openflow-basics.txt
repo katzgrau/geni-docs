@@ -1,7 +1,7 @@
 OpenFlow Basics
 ===============
 
-**Note:** This is a computer networking-focused document. It's expected that you have basic knowledge of computer network architecture as specified in the :doc:`../../intro/prerequisites`.
+**Note:** This is a computer networking-focused document. It's expected that you have basic knowledge of computer network architecture as specified in the :doc:`../intro/prerequisites`.
 
 Introduction
 ------------

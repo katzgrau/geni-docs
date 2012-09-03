@@ -19,7 +19,10 @@ Read on to find out :doc:`why GENI exists <intro/what-is-geni>`.
    intro/index
    setup/index
    examples/index
-   Core Documentation <main/index>
+   tools/index
+   resources/index
+   gigabit/index
+   openflow/index
    conclusion/index
 
 Indices and tables
