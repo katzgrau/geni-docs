@@ -1,8 +1,118 @@
 Example 3 - Programming Networks with OpenFlow
 ==============================================
 
+**Note**: This example references many topics which were discussed in :doc:`example 1 <example-1>` and :doc:`example 2 <example-2>`, which act as sufficient prerequisites.
+
 The full "what and why" of OpenFlow is discussed in the :doc:`core documentation <../openflow/index>`, but the reason you would want to use OpenFlow is to program how exactly your network behaves. For example, maybe you want to write a custom protocol and segment traffic in your network. Maybe you simply want to play around with a programmable switch.
 
 OpenFlow is the leading architecture of Software Defined Networking (SDN), which is shaping up to be the future of deeply programmable networks.
 
-In this experiment 
+In this experiment, we're going to get a software OpenFlow switch up and running on a single machine on GENI. Our node will act as an OpenFlow switch **and** it will be networked with two additional machines. We're going to send ``ping`` packets through our switch from one node to another, and then program the switch to drop any packets headed from one node to another.
+
+Our virtual topology will look like this:
+
+.. image:: ../assets/images/ex3-topology.png
+
+The node on the left will be the node we send packets to, and the node on the right will be the receiver of the packets. The node in the middle will be our software switch.
+
+Step 1 - Set Up Our Network
+---------------------------
+
+Open up Flack as we did in the previous example, and create a new slice, giving it a unique name:
+
+.. image:: ../assets/images/ex3-new-slice.png
+
+When you've submitted the new slice request, and the slice is created, click into it so you have a blank pane in front of you:
+
+.. image:: ../assets/images/ex3-blank-pane.png
+
+Drag three PC nodes from utahemulab.cm on the pane:
+
+**Before:**
+
+.. image:: ../assets/images/ex3-topo-before.png
+
+**After:**
+
+.. image:: ../assets/images/ex3-topo-after.png
+
+**Important:** The node in the middle will be our network switch.
+
+The next thing we'll want to do is network our three machines together. For this, we'll drag two LAN components onto the pane. We want to have two distinct networks, so we'll network the switch and the node on the left first, and secondly, the node on the right and the switch.
+
+**Firstly:**
+
+.. image:: ../assets/images/ex3-network-step-1.png
+
+**Secondly:**
+
+.. image:: ../assets/images/ex3-network-step-2.png
+
+Now we're ready to configure out individual boxes.
+
+Step 2 — Specify Ubuntu As the Operating System and Submit
+----------------------------------------------------------
+
+Let's configure all three nodes so that they have Ubuntu installed. For the node on the left, click on the information icon:
+
+.. image:: ../assets/images/ex3-os-setup-i.png
+
+In the pane that appears, head to the "Disk Image" field, and find the option for "Ubuntu 12.04 LTS with KVM installed". Select that:
+
+.. image:: ../assets/images/ex3-os-setup-select.png
+
+Click "Apply" at the bottom, and do the same for the other two nodes in our network. When you're done, each node should be marked as having the Ubuntu OS configured:
+
+.. image:: ../assets/images/ex3-os-setup-final.png
+
+We've got our network set up! We're ready to submit our request to provision these nodes. Click "Submit" on the bottom of the screen. If you hit any errors while provisioning, you can submit again.
+
+Step 3 - Install Open vSwitch
+-----------------------------
+
+The node in the middle is going to be our switch. A this point, that node should have an address next to it, such as ``pcXXX.emulab.net``, possibly with a port number. SSH into that back in a new terminal. In the example above, we'll do::
+
+	$ ssh pc209.emulab.net
+	$ sudo bash
+
+We executed ``sudo bash`` since we're going to be doing a lot of heavy lifting that requires root. Now we need to install Open vSwitch. This is actually very easy, and only requires that we install a few packages with the ``apt`` package manager and do some housework. First, run these commands and confirm 'Yes' any prompts.::
+
+	$ apt-get update
+	$ apt-get install openvswitch-datapath-source bridge-utils
+	$ module-assistant auto-install openvswitch-datapath
+	$ apt-get install openvswitch-brcompat openvswitch-common
+	$ apt-get install curl traceroute
+
+Now, we'll do a little editing. Execute::
+
+	$ nano /etc/default/openvswitch-switch
+
+And change the line that says::
+
+	# BRCOMPAT=no
+
+To::
+
+	# BRCOMPAT=yes
+
+And finally, restart Open vSwitch::
+
+	$ /etc/init.d/openvswitch-switch restart
+
+Step 4 - Configure Open vSwitch to Use our Ethernet Interfaces
+--------------------------------------------------------------
+
+This next step truly depends on the system that you're working on. You need to know which interfaces you're going to be working with for the next steps. To do that, run::
+
+	$ ifconfig
+
+In the output, you'll see a few different interfaces. The ones you need are prefixed by 'eth', and end with anything between 1 and 5. In the example, below, the two interfaces relevant to us are ``eth2`` and ``eth4``.
+
+.. image:: ../assets/images/ex3-interfaces.png
+
+
+
+Additional Resources
+--------------------
+
+This tutorial was adapted from this blog post for GENI: http://networkstatic.net/2012/06/openflow-openvswitch-lab/

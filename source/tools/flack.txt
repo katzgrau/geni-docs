@@ -37,3 +37,8 @@ Dealing with Failures
 ---------------------
 
 Lorem ipsum
+
+Additional Resources
+--------------------
+
+**Official Flack Manual**: http://www.protogeni.net/trac/protogeni/wiki/FlackManual

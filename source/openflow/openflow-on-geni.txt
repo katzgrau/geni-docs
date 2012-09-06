@@ -23,3 +23,8 @@ Reserve an HP Switch and install OpenFlow
 -----------------------------------------
 
 TODO: Include this option? Seems *very* advanced for the average developer just looking to hack.
+
+Additional Resources
+--------------------
+
+http://networkstatic.net/2012/06/openflow-openvswitch-lab/
