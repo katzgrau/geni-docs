@@ -3,3 +3,4 @@ Physical Machines
 
 Of the two computing resources you'll have available to you on GENI, Physical Machines are one of them. They are most often referred to as "PC" or "PCs" in documentation and software tools.
 
+Change OS

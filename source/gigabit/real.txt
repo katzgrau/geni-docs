@@ -63,6 +63,6 @@ Now that we've nearly got our network set up, we're ready to request gigabit spe
 
 When we click "Apply," our project will reflect our requested speed in the experiment pane:
 
-.. image:: ../assets/images/gig-lan-submit.png
+.. image:: ../assets/images/ex2-gig-lan-submit.png
 
 You're now ready to submit your requested topology, and use the gig network.

@@ -265,10 +265,3 @@ Imagine the possibilities. You have a gigabit network to play on. What could you
 **But remember:** If you don't need the resources you provisioned right now, it's better that you delete your machines/slivers and release them into the pool of available resources for other hackers and experimenters.
 
 Lastly, if you found yourself tripped up by any part of this tutorial, be sure to reach out to katzgrau@gmail.com with feedback or questions.
-
-TODO
-----
-
-The reason we bent over backwards to install iperf manually is that the existing ``-u`` switch for iperf is broken. See: http://code.google.com/p/iperf/issues/detail?id=36
-
-Until that's fixed and we can just rely on ``yum``, we'll keep it this way.

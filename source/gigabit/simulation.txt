@@ -1,2 +1,28 @@
 Simulating Gigabit Speeds
 =========================
+
+If you aren't quite ready to :doc:`set up a multi-site gigabit network <real>`, you can also *simulate* gigabit speeds with a special node type called a :doc:`delay <../resources/delay>`.
+
+The delay node allows you to configure extra characterists such as link capacity, packet loss rates, and general latency. This is useful for capping your connection speed to other nodes, or simulating a less-than-desirable environment for your app. After all, in reality, latency and packet loss are real issues that must be dealt with.
+
+In the image below, we have two nodes that have yet to be networked together:
+
+.. image:: ../assets/images/core-delay-setup.png
+
+In the resource list drop down, we're going to select the 'delay' option:
+
+.. image:: ../assets/images/core-delay-select.png
+
+From there, we'll want to drag a delay node (or two) onto the pane
+
+.. image:: ../assets/images/core-delay-drag.png
+
+Finally, let's drag links between the nodes so the LANs are set up automatically:
+
+.. image:: ../assets/images/core-delay-topology.png
+
+At this point, let's click the *i* icon on the delay node. We'll see a properties pane appear with areas to set capacity, latency, and packet loss on either incoming or outgoing traffic. At this time, capacity is in kb/s, latency in milliseconds, and packet loss as a number between 0 and 1.
+
+.. image:: ../assets/images/core-delay-set-props.png
+
+Apply your settings, and you can now build and run your app as if you're on a gig network.

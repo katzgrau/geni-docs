@@ -1,13 +1,14 @@
-Gigabit Speeds
+Resource Types
 ==============
 
-A big capability of GENI is supporting experiments over high-speed gigabit networks. this section describes how you can get up and running at 1Gb/s.
+Throughout the examples, we've only seen the use of the standard computing resources available to us on GENI, like VMs and PCs. This section will go over some of the more commonly used resources that we haven't seen yet, in to aspects of PCs and VMS that you may not have been exposed to yet.
 
 **Contents**
 
 .. toctree::
    :maxdepth: 1
 
+   firewall
    pc
    vm
    delay

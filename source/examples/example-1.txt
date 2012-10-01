@@ -147,9 +147,3 @@ I can't log into my machines via SSH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Double check that your public SSH key (usually on your computer at something similar to ``~/.ssh/id_rsa.pub``) is registered with your Management Authority user account. When your machines are provisioned by GENI, your public key will be placed in the ``~/.ssh/authorized_keys`` file on each host so you will have a password-less login.
-
-TODO
-----
-
-- Step 1 references something that probably won't be necessary in the future.
-- Step 4 references something that probably won't be allowable for US Ignite Challenge.

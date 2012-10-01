@@ -50,7 +50,7 @@ The next thing we'll want to do is network our three machines together. For this
 
 Now we're ready to configure out individual boxes.
 
-Step 2 — Specify Ubuntu As the Operating System and Submit
+Step 2 - Specify Ubuntu As the Operating System and Submit
 ----------------------------------------------------------
 
 Let's configure all three nodes so that they have Ubuntu installed. For the node on the left, click on the information icon:
