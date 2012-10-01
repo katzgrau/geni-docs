@@ -11,7 +11,7 @@ You'll need GENI credentials before you can start experimenting. :doc:`Click her
 Virtual Machines
 ----------------
 
-We've mentioned that GENI is a virtual laboratory for running network experiments. As a credentialed GENI user, you are allowed to *request* and allocate resources around the world, such as virtual and physical machines.
+We've mentioned that GENI is a virtual laboratory for running network experiments. As a GENI user, you are allowed to *request* and allocate resources around the world, such as virtual and physical machines.
 
 It's a good idea that you understand the basic difference between the different machine types. Sometimes it's helpful to work with specific machine types in your experiments.
 

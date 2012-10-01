@@ -11,7 +11,7 @@ If you run into any problems with this tutorial, reach out to kenny at mozillafo
 Step 1. Log In to Your Management Authority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For this tutorial we're going to use :doc:`Flack <../tools/flack>`, the browser-based visual tool for interacting with GENI. The easiest was to authenticate with Flack is to simply be logged in to your management authorities' website in one window or tab, and to have Flack open in another window or tab.
+For this tutorial we're going to use :doc:`Flack <../tools/flack>`, the browser-based visual tool for interacting with GENI. The easiest way to authenticate with Flack is to simply be logged in to your clearinghouse' website in one window or tab, and to have Flack open in another window or tab.
 
 **Figure 1: Logging in to a management authority (yours may differ)**
 
@@ -39,7 +39,7 @@ Along the top of the prompt, there should be a button and dropdown box that says
 
 Select your management authority's domain from the dropdown. The correct domain to choose will match up with the domain where you logged in at Step 1.
 
-Once the correct item is selected, click the "Download" button next to the option list. Your encrypted private key should appear, as in the figure below:
+Once the correct item is selected, click the "Download" button next to the option list. Your certificate (credentials) should appear, as in the figure below:
 
 .. image:: ../assets/images/flack-download-pk.png
 
@@ -75,7 +75,7 @@ In the image below, you'll see:
 
 .. image:: ../assets/images/flack-slice-tools.png
 
-In area B, there will be an authority listed named 'utahemulab.cm'. Drag the "VM" component immediately next to it to the area on the right. You should see:
+In area B, there will be an authority listed as 'utahemulab.cm'. Drag the "VM" component immediately next to it to the area on the right. You should see:
 
 .. image:: ../assets/images/flack-new-vm.png
 
@@ -87,7 +87,7 @@ Lastly, drag a line between the two VMs, and click "Submit" on the bottom. Keep 
 
 .. image:: ../assets/images/flack-link-nodes.png
 
-At this point, you have two virtual machines on the GENI platform that are being provisioned. These two VMs are networked, and will have aliases in their hosts file which point to each other. **In other words, from this visual tool (Flack), you created two real virtual machines that are networked with each other on GENI.**
+At this point, you have two virtual machines on the GENI platform that are being provisioned. These two VMs are networked, and will have entries in their hosts file, (``/etc/hosts``) automatically created which point to each other. **In other words, from this visual tool (Flack), you created two real virtual machines that are networked with each other on GENI.**
 
 When your VMs are ready, the background color of the right pane will be light green, as below.
 
@@ -139,6 +139,7 @@ I clicked 'Submit' to create my machines, but there was an error
 
 Occasionally a request to provision machines cannot be fulfilled. You can always try:
 
+- Deleting the failed resources if necessary (a red background means failure)
 - Submitting the request again
 - Trying to provision machines from a different management authority
 

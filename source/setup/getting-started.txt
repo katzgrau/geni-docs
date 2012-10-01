@@ -1,9 +1,20 @@
 GENI Quick Start
 ================
 
-[More to come]
+Getting started with GENI and building a solid understanding of its capability is as easy as:
 
-TODO
-----
+- :doc:`Obtaining GENI credentials <get-your-geni-credentials>`
+- Reading up on :doc:`Key GENI Concepts <../intro/key-geni-concepts>`
+- :doc:`Working through Example 1 <../examples/example-1>`
 
-Open question: The combination of getting your GENI credentials and :doc:`Example #1 <../examples/example-1>` constitutes a nice quick start. Is it worth regurgitating something again, or simply directing the user in an organized manner here?
+At that point, you may feel comfortable enough to start exploring what sort of tools and resources are available to you on GENI, or perhaps dive into gigabit networking and OpenFlow.
+
+So after you've completed the 3 points above, branch out and explore:
+
+- :doc:`Running gigabit-speed experiments on GENI <../examples/example-2>`
+- :doc:`Running OpenFlow on GENI <../examples/example-3>`
+- :doc:`Finding out what features and resources are available <../recources/index>`
+- :doc:`Other tools that can be used to manipulate GENI resources <../recources/index>`
+
+And lastly, if you're a hacker who wants to build webapps of the future, be sure to check out the :doc:`list of tips and trick for hackers <hackers-guide>`, which will come in handy as your apps and experiments become for sophisticated and user-oriented.
+

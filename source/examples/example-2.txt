@@ -24,7 +24,7 @@ The steps of this tutorial are very similar to the last tutorial, up until step 
 Step 1. Log In to Your Management Authority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let's start by logging into your management authority if you aren't already authenticated.
+Let's start by logging into your clearinghouse if you aren't already authenticated.
 
 .. image:: ../assets/images/geni-ma-login.png
 
@@ -40,7 +40,7 @@ Next, we'll open Flack in a new browser window or tab: http://www.protogeni.net/
 Step 3. Log In With Flack
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As we had done previously, choose the correct management authority if it isn't already selected along the top of flack. Click the "download" button to have your keys loaded, and enter you password.
+As we had done previously, choose the correct clearinghouse if it isn't already selected along the top of flack. Click the "download" button to have your keys loaded, and enter you password.
 
 When prompted to select where to list resources from, leave all of the options checked and click "Continue".
 
@@ -53,7 +53,7 @@ In order to utilize a gigabit backbone, we'll provision a machine at both ends o
 
 In the image below, the Utah aggregate is black and has the number "633" on it. Washington DC is grey and has "136" on top of it.
 
-**Note:** Because those numbers denote the number of slivers available in those aggregates, the number fluctuates, and is likely different at the time that you are reading this.
+**Note:** Because those numbers denote the number of resources available in those aggregates, the number fluctuates, and is likely different at the time that you are reading this.
 
 .. image:: ../assets/images/flack-map.png
 
@@ -151,7 +151,7 @@ In the capacity field, enter "1000000". The unit of the capacity field is in kb/
 
 .. image:: ../assets/images/ex2-lan-props.png
 
-Click "Apply" at the bottom of the screen. If you've made it this far, congratulations! It's time to provision your gigabit network! Click "Submit" at the bottom of the slice pane, and confirm.
+Click "Apply" at the bottom of the screen. If you've made it this far, congratulations! It's time to reserve your gigabit network! Click "Submit" at the bottom of the slice pane, and confirm.
 
 **Note: This can sometimes be a process that takes up to 15 minutes, and it occasionally fails or hangs. If it does fail, you may try again until it succeeds.** If it continues to fail, it may be possible that your resource was granted to another experimenter while you were setting up your lan. You can click the "refresh" icon above the "Managers" list on the far left side of Flack to get the latest resource lists.
 
@@ -170,7 +170,7 @@ Step 9. Log in to the machines
 
 Let's now open two terminals windows - one for each box we've provisioned, and one for an SSH tunnel that we'll need. Let's start with logging into the box prefixed with **pc**. You should specify the address of the pc, and be sure to include the port number of needed with the ``-p`` flag.
 
-**Note:** At the same time we're going to log into the first box, we'll set up an SSH tunnel that we can use to log into the other box. pg40 is a remote node, and we won't be able to access it directly.
+**Note:** At the same time we're going to log into the first box, we'll set up an SSH tunnel that we can use to log into the other box. pg40 is behind a firewall, and we won't be able to access it directly.
 
 Your SSH login command should look like::
 
@@ -180,9 +180,9 @@ So with the machines we've been working with, we'll do just that:
 
 .. image:: ../assets/images/ex2-login-1.png
 
-Great. Now for logging into the second box (prefixed 'pg'). Since we have a tunnel open on port 2224 locally, we'll connect to that. You can type the same exact command verbatim::
+Great. Now for logging into the second box (prefixed 'pg'). Since we have a tunnel open on port 2224 locally, we'll connect to that. You can type the same exact command, replacing [username] with your username::
 
-	$ ssh -p 2224 127.0.0.1
+	$ ssh -p 2224 [username]@127.0.0.1
 
 .. image:: ../assets/images/ex2-login-2.png
 

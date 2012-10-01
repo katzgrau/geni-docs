@@ -10,7 +10,7 @@ The basic work-flow of a developer looking to start building on GENI offers a ni
 
 **From the top: Clearinghouse**
 
-In order to start interacting with GENI, Alice need to become a credentialed GENI user. Alice can obtain credentials from a GENI *Clearinghouse*. A GENI Clearing house can issue credentials that are *federated*, meaning that they are recognized by all GENI *Management Authorities*.
+In order to start interacting with GENI, Alice need to become a GENI user. Alice can obtain credentials from a GENI *Clearinghouse*. A GENI Clearing house can issue credentials that are *federated*, meaning that they are recognized by all GENI *Management Authorities*.
 
 **What's in a Management Authority?**
 

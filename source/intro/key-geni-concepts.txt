@@ -36,7 +36,16 @@ A *slice* is an environment and conceptual container that your resources reside 
 
 **Sliver**
 
-Up until now, we have referred to the different computing and network components that you allocate within GENI as *resources*. In GENI terminology, these resources are typically called a *slivers*, but it represents that computing resources are often virtualized and shared on a physical machine. In the Image of *Flack* above, you can see the slivers that are going to be allocated for the *slice* named 'TestSlice': 1 Virtual Machine (VM), 1 Physical Machine (PC), and network interfaces to link them (lan0).
+a sliver is a set of resources that are reserved in an
+AM for a slice, i.e. slivers are what a user has in specific AMs
+
+Up until now, we have referred to the different computing and network components that you allocate within GENI as *resources*. On GENI, you may have resources in many different places. For example, maybe you have resources allocated in Utah, and you have other resources allocated in Washington DC.
+
+In GENI terminology, a *sliver* refers to the set of resources in a single location. So that group of resources in Utah is one sliver, and the grouping of resources in Washington DC is another sliver.
+
+Your slivers are all part of the same *Slice*.
+
+In the Image of *Flack* above, you can see the sliver that is going to be allocated for the *slice* named 'TestSlice': 1 Virtual Machine (VM), 1 Physical Machine (PC), and network interfaces to link them (lan0).
 
 **Clearinghouse**
 

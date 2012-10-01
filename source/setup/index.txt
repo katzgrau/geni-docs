@@ -10,3 +10,4 @@ You're now ready to sign up and start experimenting with GENI. The first thing y
 
    get-your-geni-credentials
    getting-started
+   hackers-guide

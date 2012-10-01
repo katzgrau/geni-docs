@@ -73,7 +73,7 @@ Step 3 - Install Open vSwitch
 The node in the middle is going to be our switch. A this point, that node should have an address next to it, such as ``pcXXX.emulab.net``, possibly with a port number. SSH into that back in a new terminal. In the example above, we'll do::
 
 	$ ssh pc209.emulab.net
-	$ sudo bash
+	$ 2sudo bash
 
 We executed ``sudo bash`` since we're going to be doing a lot of heavy lifting that requires root. Now we need to install Open vSwitch. This is actually very easy, and only requires that we install a few packages with the ``apt`` package manager and do some housework. First, run these commands and confirm 'Yes' any prompts.::
 
@@ -102,15 +102,52 @@ And finally, restart Open vSwitch::
 Step 4 - Configure Open vSwitch to Use our Ethernet Interfaces
 --------------------------------------------------------------
 
-This next step truly depends on the system that you're working on. You need to know which interfaces you're going to be working with for the next steps. To do that, run::
+This next step truly depends on the box that you're working on. You need to know which interfaces you're going to be working with for the next steps. To do that, run::
 
 	$ ifconfig
 
-In the output, you'll see a few different interfaces. The ones you need are prefixed by 'eth', and end with anything between 1 and 5. In the example, below, the two interfaces relevant to us are ``eth2`` and ``eth4``.
+In the output, you'll see a few different interfaces. The ones you need are prefixed by 'eth', and end with anything between 1 and 5. In the example, below, the two interfaces relevant to us are ``eth2`` and ``eth4``. Take note of your interfaces, and apply them to the instructions below, along with the appropriate IP addresses.
 
 .. image:: ../assets/images/ex3-interfaces.png
 
+So we have interfaces ``eth2`` and ``eth4``. We want to configure Open vSwitch to use those interfaces as if they were the interfaces of a switch. We do this by setting up a virtual bridge interface. Type, or copy and paste these lines into your terminal::
 
+	ovs-vsctl add-br br-int
+	ovs-vsctl add-port br-int eth2
+	ifconfig eth2 0
+	ifconfig br-int 10.10.1.2 netmask 255.255.255.0
+	route add default gw 0.0.0.0 br-int
+	route del default gw 0.0.0.0 eth2
+
+	ovs-vsctl add-br br-int2
+	ovs-vsctl add-port br-int2 eth4
+	ifconfig eth4 0
+	ifconfig br-int2 10.10.2.1 netmask 255.255.255.0
+	route add default gw 0.0.0.0 br-int2
+	route del default gw 0.0.0.0 eth4
+
+At this point, running another::
+
+	$ ifconfig
+
+Should show your new bridge interfaces:
+
+.. image:: ../assets/images/ex3-interfaces-final.png
+
+Your switch is ready to go! Now you just need an OpenFlow controller.
+
+Step 5 - Set Up Floodlight, an OpenFlow Controller
+--------------------------------------------------
+
+Your OpenFlow switch is controlled by an OpenFlow *controller*. An OpenFlow Controller is just a software package that interfaces with the switch via the OpenFlow API, and pushes routing rules.
+
+In a situation where you had a hardware-based openflow switch, the controller would reside on a separate host. We're using a software based switch in the example, and for convenience, we're going to install the controller on the same box as our software switch.
+
+Again, we'll install a package and run a series of commands::
+
+	$ apt-get install build-essential default-jdk ant python-dev uml-utilities git
+	$ git clone git://github.com/floodlight/floodlight.git
+	$ java -jar target/floodlight.jar
 
 Additional Resources
 --------------------
