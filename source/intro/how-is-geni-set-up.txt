@@ -26,6 +26,8 @@ Alice wants to start an experiment, so she needs to create an environment for he
 
 Once Alice has her slice set up, she'll want to request virtual machines from different Managers. The virtual machines, and *any* other resources that Alice might request are collectively referred to as slivers. They are called 'slivers' because they are often virtualized and shared components of a physical machine.
 
+Whereas a slice is a global container for Alice's experiments, the collection of resources she is using on any given site is referred to as a *sliver*. So if she has 2 nodes running in Utah, that's one *sliver*, and her nodes running in Washington DC are in another *sliver*.
+
 **And that's it**
 
 Now that you have a basic idea of how GENI is set up from a (very) high level, it's best to move on the the more extensive :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
@@ -37,12 +39,3 @@ Additional Resources
 A glossary of the terms italicized in the document are available in the :doc:`GENI Terms and Concepts <key-geni-concepts>` section.
 
 A more encompassing document with lower-level details on GENI architecture is `available here <http://groups.geni.net/geni/attachment/wiki/GeniSysOvrvw/GENI-AnIntroduction-28Feb2012.pdf>`_.
-
-TODO
-----
-
-A diagram would probably go nicely here.
-
-The user will not get creds from a Clearinghouse for Mozilla Ignite. Reconcile.
-
-There are more in-depth details that are left out in this document, primarily regarding the management of aggregates and how that plays into the overall architecture. After some feedback, we'll determine how necessary those details are.

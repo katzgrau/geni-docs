@@ -49,7 +49,7 @@ In the Image of *Flack* above, you can see the sliver that is going to be alloca
 
 **Clearinghouse**
 
-A *Clearinghouse* is a GENI authority that is capable of signing users up to experiment with GENI. In the GENI architecture, there are multiple clearinghouses. For the purposes of this document, you only need to be familiar with TODO.
+A *Clearinghouse* is a GENI authority that is capable of signing users up to experiment with GENI. In the GENI architecture, there are multiple clearinghouses. If you are gaining credentials through the `The Mozilla Ignite App Challenge <http://mozillaignite.com>`_, your clearinghouse will be located at ``pgeni.gpolab.bbn.com``.
 
 **Federation**
 
@@ -82,10 +82,3 @@ Additional Resources
 This list is a modification of the original GENI glossary available at GENI.net. It has been modified to be of use specifically to developers. You are encouraged, however, to read as deeply into GENI as you see fit.
 
 1. `Geni.net GENI Glossary <http://groups.geni.net/geni/wiki/GeniGlossary>`_
-
-TODO
-----
-
-Perhaps define more succinctly what exactly an *aggregate* is. The term exists on the official GENI glossary, but may be overly broad for the average developer. The same goes for the term *authority*
-
-For the purposes of Mozilla Ignite, users will not really need to know about other clearinghouses aside from the one their credentials came through. Keep this in mind for the Clearinghouse definition, which is marked with a TODO.

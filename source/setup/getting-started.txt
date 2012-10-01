@@ -13,8 +13,8 @@ So after you've completed the 3 points above, branch out and explore:
 
 - :doc:`Running gigabit-speed experiments on GENI <../examples/example-2>`
 - :doc:`Running OpenFlow on GENI <../examples/example-3>`
-- :doc:`Finding out what features and resources are available <../recources/index>`
-- :doc:`Other tools that can be used to manipulate GENI resources <../recources/index>`
+- :doc:`Finding out what features and resources are available <../resources/index>`
+- :doc:`Other tools that can be used to manipulate GENI resources <../resources/index>`
 
 And lastly, if you're a hacker who wants to build webapps of the future, be sure to check out the :doc:`list of tips and trick for hackers <hackers-guide>`, which will come in handy as your apps and experiments become for sophisticated and user-oriented.
 

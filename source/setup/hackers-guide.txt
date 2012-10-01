@@ -31,6 +31,40 @@ At that point, any windowed application you run in the terminal on the remote ho
 
 	$ firefox
 
-And you should see a window appear, showing your Firefox browser running remotely:
+And you should see a window appear, showing your Firefox browser running remotely.
 
-TODO: Image
+Accessing Nodes Behind Firewalls
+--------------------------------
+
+In a couple of the example projects, we set up nodes in Utah and Washington DC. In DC, the names of our nodes were prefixed with ``pg``. For example, the name of the node might be something like ``pg502``.
+
+Nodes prefixed with ``pg`` are behind a firewall, and accessing them can only be done through another node networked with them. For that reason, it's easiest to set up an SSH tunnel to reach the ``pg`` node.
+
+This is a necessary part of completing :doc:`Example 2 <../examples/example-2>`, so it would be good to know how this works ahead of time.
+
+Setting Up an SSH Tunnel
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's say that we have two GENI nodes set up: ``pc100``, and ``pg200``.
+
+Locally, you would open up two SSH terminals. One will be for connecting to ``pc100`` at pc100.emulab:22.net, and the other will be for connecting to ``pg200`` at pg200.emulab.net:22.
+
+We can easily connect to ``pc100`` directly in one terminal. But in the process, we're going to have a tunnel open on that same connection. For example, we'll execute something in the form of::
+
+	$ ssh -p [pcxxx port] [username]@[pcxxx host] -L 2222:[pgxxx host]:[pgxxx ssh port]
+
+How generic! Let's put that into perspective for our example, with the username 'katzgrau'. We'll execute::
+
+	$ ssh -p 22 katzgrau@pc100.emulab.net -L 2222:pg200.emulab.net:22
+
+At that point, you should have connected by SSH to ``pc100``. Now, we're in the clear to connect to ``pg200``. The generic for would look like::
+
+	$ ssh -p [local tunnel port][username]@127.0.0.1
+
+But in this example, we'll execute::
+
+	$ ssh -p 2222 katzgrau@127.0.0.1
+
+Our SSH connection will be routed through ``pc100`` over to ``pg200``, and we should be good to go!
+
+If you find yourself having trouble with this, it may be wise to read up on `SSH tunnels in general <http://www.revsys.com/writings/quicktips/ssh-tunnel.html>`_. They can be confusing to a newcomer, but that barrier is easily overcome. In addition, creating tunnels can be very handy in your experiments.

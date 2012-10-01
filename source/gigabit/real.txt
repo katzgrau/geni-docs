@@ -1,5 +1,68 @@
 Real Gigabit Speeds
 ===================
 
-Note: It doesn't always work
-Note: If you let Flack sit open for a while, it seems things get out of sync
+Getting an experiment or app up and running on GENI means that you have access to gigabit-speed networking. You might reserve one machine that will act as a server, and perhaps 9 others that will act as clients. Between them, you might have have high-speed gigabit connections.
+
+As a web developer, building an app that depends on high speed is difficult — most end-users today aren't on a gigabit-capable internet service, so it makes building such applications impractical or impossible. On GENI, although, you have the ability to run your app in an environment where speed isn't an issue. You can truly build an app *for the future*.
+
+The second example project, listed in the projects section, demonstrates how easy it is to get set up on a high speed connection within the GENI environment:
+
+- :doc:`Click here to head over to Example #2 <../examples/example-2>`
+
+Requesting Gigabit Links On GENI
+--------------------------------
+
+When you're setting up your experiment architecture, you have the ability to set the bandwidth properties of the network that the nodes are in. There are three important steps in making sure you get a gigabit link:
+
+1. Select nodes with have a gigabit interface
+2. Select nodes that are on a gigabit backbone (if applicable)
+3. Request that network link between the nodes is for 1000000 kb/s
+
+1. Selecting the Right Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the image below, we already have a slice set up, and we're selecting nodes for our experiment. By navigating to the map, and clicking into an aggregate, we get a list of nodes available to us:
+
+.. image:: ../assets/images/ex2-gig-resource.png
+
+Clicking through, we finally find one available that has a 1 Gb/s connection. This is the type of node we'll want to use. The next step would be simply dragging that node to our project pane (along with any others that we need).
+
+2. Getting on A Gig Backbone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now that we've got those gigabit interfaces available, we want to use them! If we're running a multi-site experiment, we need to find nodes on another site that is linked on a *gigabit backbone* to the first node(s) we selected.
+
+Looking at our Flack map, we see that we have resources connected to out first node's aggregate by a pink/magenta line. In this case, we're focused on an aggregate in Washington DC.
+
+.. image:: ../assets/images/ex2-dc-resources.png
+
+Clicking into into that aggregate, we again get a list of resources. Our goal is to find another machine with a gig interface.
+
+.. image:: ../assets/images/ex2-dc-gigs.png
+
+Now that we've found one, we'll drag that resource onto our map too, and create a network between them:
+
+.. image:: ../assets/images/ex2-lan-before.png
+
+And:
+
+.. image:: ../assets/images/ex2-lan-after.png
+
+And:
+
+.. image:: ../assets/images/ex2-gig-lan.png
+
+We're ready to finalize our gigabit network now.
+
+3. Requesting the Right Bandwidth
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now that we've nearly got our network set up, we're ready to request gigabit speed between our nodes. We'll click the *information* icon on our lan. We'll see a pane that opens up. Click the "properties" tab. We want to specify that there should be a 1000000 kb/s connection on the network, like so:
+
+.. image:: ../assets/images/ex2-lan-props.png
+
+When we click "Apply," our project will reflect our requested speed in the experiment pane:
+
+.. image:: ../assets/images/gig-lan-submit.png
+
+You're now ready to submit your requested topology, and use the gig network.
