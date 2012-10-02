@@ -17,14 +17,17 @@ This is also the easiest option with the lowest barrier to entry. The third tuto
 Using the GENI Mesoscale Infrastructure
 ---------------------------------------
 
-TODO: Hand of interest in this to help@geni.net
+GENI's Mesoscale environment is a perfect place to run a large-scale OpenFLow experiment beyond a software-based option like Open vSwitch. Because this option requires coordination with the GENi Project Office (GPO), you may want to get you experiment running with Open vSwitch first, if that's an option.
+
+From there, reach out to help@geni.net for more information on obtaining a subnet for your experiment. A third-party, but detailed guide on how you might get your project running on the Mesoscale infrastructure is `available on Github <https://github.com/aaronorosen/GeniTutorial/wiki/Geni-Mesoscale-Tutorial>`_. 
 
 Reserve an HP Switch and install OpenFlow
 -----------------------------------------
 
-TODO: Include this option? Seems *very* advanced for the average developer just looking to hack.
+This is an advanced option for getting up and running on OpenFlow. If you're ambitious enough to reserve HP OpenFlow hardware, or simply have the need, reach out to help@geni.net for more information.
 
 Additional Resources
 --------------------
 
-http://networkstatic.net/2012/06/openflow-openvswitch-lab/
+- A guide on installing Open vSwitch: http://networkstatic.net/2012/06/openflow-openvswitch-lab/
+- A guide on using GENI Mesoscale: https://github.com/aaronorosen/GeniTutorial/wiki/Geni-Mesoscale-Tutorial

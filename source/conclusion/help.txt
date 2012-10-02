@@ -1,2 +1,6 @@
-Help
-====
+Additional Help
+===============
+
+If you should need assistance, or have specific questions about GENI, send a note to the GENI Project Office at help@geni.net.
+
+For issues with documentation, perhaps regarding something that is unclear, reach out to kenny@mozillafoundation.org.

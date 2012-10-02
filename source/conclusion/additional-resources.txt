@@ -1,2 +1,8 @@
 Additional Resources
 ====================
+
+Here's a list of resources that may be helpful to you as you explore new areas of GENI that may not of been discussed in this documentation.
+
+- `The Main GENI Wiki <http://groups.geni.net/geni>`_: The documentation written by GENI experimenters and the GENI project office. This contains additional information on what other experimenters are using GENI for, and more projects for beginners.
+- `The Protogeni Wiki <http://www.protogeni.net/trac/protogeni>`_: The documentation for Protogeni, a deployment of GENI. This contains both overlapping information in comparison with the Main GENI Wiki, and additional information as well.
+- `Open vSwitch Documentation <http://openvswitch.org/support/>`_: The documentation for Open vSwitch, the software based switch used in the :doc:`OpenFlow example project <../examples/example-3>` in these docs.

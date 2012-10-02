@@ -1,6 +1,8 @@
 Conclusion
 ==========
 
+At this point, you've been exposed to the most useful components of GENI for an app developer. The GENI platform is still being developed, however, and new services and tools for it are always being developed. It's time to point you toward additional resources that cover the dark corners of the platform, should you need them.
+
 **Contents**
 
 .. toctree::
