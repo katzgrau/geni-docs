@@ -3,4 +3,21 @@ Physical Machines
 
 Of the two computing resources you'll have available to you on GENI, Physical Machines are one of them. They are most often referred to as "PC" or "PCs" in documentation and software tools.
 
-Change OS
+Install A Specific Operating System
+-----------------------------------
+
+By default, GENI nodes get Fedora Core installed on them when created. You can override this by clicking into the properties of a PC and setting its operating system. Your choices are fairly standard: Ubuntu, Redhat, FreeBSD, or Fedora. Additionally, there are distros that come pre-packages with tools like KVM (Kernel Virtual Machine), which might be handy if you plan to host virtual machines, for instance.
+
+.. image:: ../assets/images/core-pc-select-os.png
+
+Install Packages Automatically
+------------------------------
+
+If you have the URL to a package you would like to have installed for you, you can add an "install service". When the machine is created, the package will be installed in the directory that you specify. This option is available in the properties pane of the PC.
+
+.. image:: ../assets/images/core-pc-install-package.png
+
+
+
+
+

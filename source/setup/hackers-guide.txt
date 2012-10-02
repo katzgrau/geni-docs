@@ -68,3 +68,22 @@ But in this example, we'll execute::
 Our SSH connection will be routed through ``pc100`` over to ``pg200``, and we should be good to go!
 
 If you find yourself having trouble with this, it may be wise to read up on `SSH tunnels in general <http://www.revsys.com/writings/quicktips/ssh-tunnel.html>`_. They can be confusing to a newcomer, but that barrier is easily overcome. In addition, creating tunnels can be very handy in your experiments.
+
+Saving Configurations/RSpecs
+----------------------------
+
+If you've gone through the trouble of setting up a complex topology with specially configured nodes, it can be extremely helpful to save configuration of your experiment into an RSpec/text file. Next time that you want to set up the same experiment, you can load in the RSpec.
+
+To see the RSpec that was generated while you were configuring your project, click the "View" dropdown on the upper left of the slice pane:
+
+.. image:: ../assets/images/tips-preview-rspec.png
+
+From there, click "Preview request documents", and you should see:
+
+.. image:: ../assets/images/tips-view-rspec.png
+
+You have the copy to copy this RSpec or save it to a file. It's probably best to save it to a file so you can load it up later. When that time comes, click the "Import" dropdown.
+
+.. image:: ../assets/images/tips-import-rspec.png
+
+When you import the RSpec, your experiment will be created with all the same settings and configurations it had before.

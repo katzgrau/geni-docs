@@ -3,3 +3,6 @@ Virtual Machines
 
 Of the two computing resources you'll have available to you on GENI, Virtual Machines are one of them. They are most often referred to as "VM" or "VMs" in documentation and software tools.
 
+Virtual Machines are almost the same as PCs, with the exception that you are probably sharing compute resources with another VM on the host. Additionally, you don't have the same ability to select from a set of available operating system for your node, as you do with a PC. You will be defaulted to the standard Emulab Fedora Core 6 image.
+
+To see the configurable options for a PC, :doc:`read more here <pc>`.

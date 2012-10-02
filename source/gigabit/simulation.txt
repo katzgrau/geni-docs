@@ -5,6 +5,9 @@ If you aren't quite ready to :doc:`set up a multi-site gigabit network <real>`, 
 
 The delay node allows you to configure extra characterists such as link capacity, packet loss rates, and general latency. This is useful for capping your connection speed to other nodes, or simulating a less-than-desirable environment for your app. After all, in reality, latency and packet loss are real issues that must be dealt with.
 
+Changing Network Speed Artificially
+-----------------------------------
+
 In the image below, we have two nodes that have yet to be networked together:
 
 .. image:: ../assets/images/core-delay-setup.png
@@ -21,7 +24,7 @@ Finally, let's drag links between the nodes so the LANs are set up automatically
 
 .. image:: ../assets/images/core-delay-topology.png
 
-At this point, let's click the *i* icon on the delay node. We'll see a properties pane appear with areas to set capacity, latency, and packet loss on either incoming or outgoing traffic. At this time, capacity is in kb/s, latency in milliseconds, and packet loss as a number between 0 and 1.
+At this point, let's click the *i* icon on the delay node. We'll see a properties pane appear with an area to set the link capacity.
 
 .. image:: ../assets/images/core-delay-set-props.png
 

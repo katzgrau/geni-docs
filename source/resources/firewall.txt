@@ -1,2 +1,27 @@
 Firewalls
 =========
+
+Setting up a firewall in your GENI topology is as simple as dragging a node onto the experiment pane. Simply filter your list of resource types using the dropdown menu on the left. Select 'firewall':
+
+.. image:: ../assets/images/core-firewall-select.png
+
+And drag it onto your experiment: 
+
+.. image:: ../assets/images/core-firewall-select.png
+
+You can network and configure the properties of a firewall just like you can with any other resource type. It's just another node in the topology:
+
+.. image:: ../assets/images/core-firewall-types.png
+
+In the properties window above, you can specify that the firewall is either open, closed, or basic.
+
+- Open: All traffic may flow freely
+- Closed: No traffic may flow
+- Basic: SSH and HTTP/HTTPs are allowed
+
+Using an "open" style, you will be able to access the node to define rules at a later time.
+
+Additional Resources
+--------------------
+
+An emulab tutorial with more detail on firewalls: http://www.uky.emulab.net/tutorial/docwrapper.php3?docname=firewall.html
