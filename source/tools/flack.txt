@@ -7,36 +7,82 @@ Because of it's low barrier to entry, Flack is the preferred tool for getting de
 
 This document will go over the different features of Flack that may not have been touched in the examples.
 
-
 Logging In to Flack
 -------------------
 
-Lorem ipsum
+The easiest way to authenticate with Flack is to simply be logged in to your clearinghouse's website in one window or tab, and to have Flack open in another window or tab.
+
+.. image:: ../assets/images/geni-ma-login.png
+
+Open Flack in a new tab or browser window. You should see Flack initialize in the window, as in the figure below:
+
+.. image:: ../assets/images/flack-init.png
+
+Click the green "Log In" button above. Because we are already logged into our management authority via another tab, we can complete this step easily and have our private key information inserted automatically. 
+
+Along the top of the prompt, there should be a button and dropdown box that says "Download from [Select authority]" as in the figure below. 
+
+.. image:: ../assets/images/flack-pick-ma.png
+
+Select your management authority's domain from the dropdown. The correct domain to choose will match up with the domain where you logged in at Step 1.
+
+Once the correct item is selected, click the "Download" button next to the option list. Your certificate (credentials) should appear, as in the figure below:
+
+.. image:: ../assets/images/flack-download-pk.png
+
+Finally, enter the private key passphrase that you used when you signed up at your management authority when you signed up. Click "OK" on the bottom left.
+
+At this point, Flack will attempt to retrieve resources from the various authorities. When prompted to select where to list resources from, leave all of the options checked and click "Continue". Flack will gather the resources lists, and display a map of North America, as pictured below:
+
+.. image:: ../assets/images/flack-map.png
 
 Creating a Slice
 ----------------
 
-Lorem ipsum
+Click on the "New" button in the top-left corner of Flack, and enter a name for this slice. **Your slice name will have to be unique from all other GENI slices, so it cannot be the same name as in the example.**
+
+.. image:: ../assets/images/flack-new-slice.png
+
+When you're finished typing the name of your slice, click "OK". Once your slice has been created (it may take a moment), you'll see a blank pane with the name of your slice toward the top of your screen. The blank pane on the right is where we'll set up our experiment.
+
+.. image:: ../assets/images/flack-slice.png
 
 Looking For Resources
 ---------------------
 
-Lorem ipsum
+In the figure below, we have a new slice aptly named "tutorialslice", which is listed in box A. In box B, there is a list of the resource types that are available to our topology.
+
+The dropdown control at the top of box B will filter the resource types shown. You can select "raw-pc", which will show only physical computers, emu-vmz, which will show only virtual machines, and other types of resources.
+
+When you find a resource you'd like to use, drag it over to box C.
+
+.. image:: ../assets/images/flack-slice-tools.png
 
 Configuring Compute Resources
 -----------------------------
 
-Lorem ipsum
+In order to configure a computer resource like a VM or PC that is already in your topology, click the "information" icon of the node:
+
+.. image:: ../assets/images/ex3-os-setup-i.png
+
+You will see a configuration pane appear, with an option to select the "Disk Image". This is essentially the base image, and more importantly, the operating system that will be installed to your resource. At this time selecting the disk image is limited to PCs:
+
+.. image:: ../assets/images/ex3-os-setup-select.png
+
+For both PCs and VMs, you are able to add "install services". If you have the URL of a tar'd and gzip'd file with package source code (as most packages are distributed), you can add it here so it will be installed automatically when the machine is brought up:
+
+.. image:: ../assets/images/core-pc-install-package.png
 
 Configuring Network Resources
 -----------------------------
 
-Lorem ipsum
+You can set certain properties of your lan resources, such as the requested link capacity, latency, and packet loss rate. Do that by clicking the lan's information icon:
 
-Dealing with Failures
----------------------
+.. image:: ../assets/images/ex2-gig-lan-info.png
 
-Lorem ipsum
+And setting the appropriate values in the fields:
+
+.. image:: ../assets/images/ex2-lan-props.png
 
 Additional Resources
 --------------------
