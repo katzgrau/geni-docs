@@ -7,5 +7,3 @@ GENI Tools and Services (A Rundown)
    :maxdepth: 1
 
    flack
-   omni
-   seattle

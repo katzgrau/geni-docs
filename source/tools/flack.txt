@@ -1,7 +1,7 @@
 Flack
 =====
 
-Flack is a visual tool that you can use to provision and network machines on GENI. It's similar to :doc:`omni <omni>` in terms of capability, however omni is a command-line tool that provides a wider range of abilities.
+Flack is a visual tool that you can use to provision and network machines on GENI. It's similar to `omni <s/flack.txt>`_ in terms of capability, however omni is a command-line tool that provides a wider range of abilities.
 
 Because of it's low barrier to entry, Flack is the preferred tool for getting developers up and running quickly, and the :doc:`example GENI projects <../examples/index>` use it exclusively.
 

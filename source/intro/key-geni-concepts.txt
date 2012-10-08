@@ -28,7 +28,7 @@ Flack is pictured at the top of this document. It's is a visual tool for setting
 
 **Omni**
 
-Omni is a command-line tool for interacting with GENI. You can allocate resources like you can do with Flack, but without the visual interface. Omni is a powerful utility, which you can :doc:`learn more about here <../tools/omni>`.
+Omni is a command-line tool for interacting with GENI. You can allocate resources like you can do with Flack, but without the visual interface. Omni is a powerful utility, which you can `learn more about here <http://trac.gpolab.bbn.com/gcf/wiki/Omni>`_.
 
 **Slice**
 
