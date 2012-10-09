@@ -15,8 +15,11 @@ Our virtual topology will look like this:
 
 The node on the left will be the node we send packets to, and the node on the right will be the receiver of the packets. The node in the middle will be our software switch.
 
+Tutorial
+--------
+
 Step 1 - Set Up Our Network
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open up Flack as we did in the previous example, and create a new slice, giving it a unique name:
 
@@ -51,7 +54,7 @@ The next thing we'll want to do is network our three machines together. For this
 Now we're ready to configure out individual boxes.
 
 Step 2 - Specify Ubuntu As the Operating System and Submit
-----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's configure all three nodes so that they have Ubuntu installed. For the node on the left, click on the information icon:
 
@@ -68,12 +71,12 @@ Click "Apply" at the bottom, and do the same for the other two nodes in our netw
 We've got our network set up! We're ready to submit our request to provision these nodes. Click "Submit" on the bottom of the screen. If you hit any errors while provisioning, you can submit again.
 
 Step 3 - Install Open vSwitch
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The node in the middle is going to be our switch. A this point, that node should have an address next to it, such as ``pcXXX.emulab.net``, possibly with a port number. SSH into that back in a new terminal. In the example above, we'll do::
 
 	$ ssh pc209.emulab.net
-	$ 2sudo bash
+	$ sudo bash
 
 We executed ``sudo bash`` since we're going to be doing a lot of heavy lifting that requires root. Now we need to install Open vSwitch. This is actually very easy, and only requires that we install a few packages with the ``apt`` package manager and do some housework. First, run these commands and confirm 'Yes' any prompts.::
 
@@ -100,7 +103,7 @@ And finally, restart Open vSwitch::
 	$ /etc/init.d/openvswitch-switch restart
 
 Step 4 - Configure Open vSwitch to Use our Ethernet Interfaces
---------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This next step truly depends on the box that you're working on. You need to know which interfaces you're going to be working with for the next steps. To do that, run::
 
@@ -137,7 +140,7 @@ Should show your new bridge interfaces:
 Your switch is ready to go! Now you just need an OpenFlow controller.
 
 Step 5 - Set Up Floodlight, an OpenFlow Controller
---------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Your OpenFlow switch is controlled by an OpenFlow *controller*. An OpenFlow Controller is just a software package that interfaces with the switch via the OpenFlow API, and pushes routing rules.
 
@@ -147,9 +150,99 @@ Again, we'll install a package and run a series of commands::
 
 	$ apt-get install build-essential default-jdk ant python-dev uml-utilities git
 	$ git clone git://github.com/floodlight/floodlight.git
+	$ cd floodlight
+	$ make
 	$ java -jar target/floodlight.jar
+
+We've just started our Floodlight controller. This controller will act as our interface to the switch. Since we just started the controller, we'll see log messages appearing on the screen:
+
+.. image:: ../assets/images/ex3-floodlight-log.png
+
+Step 6 - Test Our Switch
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Because Floodlight is running in our terminal, we're going to open up another terminal window and ssh into our switch so we can keep working. We'll also tell the switch to listen to the Floodlight controller while we're at it::
+
+	$ ssh pc209.emulab.net
+	$ sudo bash
+	$ ovs-vsctl set-controller br-int tcp:127.0.0.1:6633
+
+Additionally, we're going to open up a connection to the machine in our topology labeled **PC**. **Your address will be different. Check your topology pane for the correct address**::
+
+	$ ssh pc536.emulab.net
+	$ sudo bash
+
+Now let's install a package of utilities we can use to test switch connectivity::
+
+	$ apt-get install uml-utilities traceroute
+
+Next, From **PC**, let's ping PC-0 to make the boxes on both ends of the switch can talk to each other::
+
+	$ ping pc-1
+
+This should yield something similar too:
+
+.. image:: ../assets/images/ex3-switch-connectivity-before.png
+
+Great! Right now let's test the *route* our packets are taking from **PC** to **PC-0**. We want to make sure our packets are flowing through the switch we set up. We can double-check by running::
+
+	$ route -n
+
+Which would yield:
+
+.. image:: ../assets/images/ex3-route-n.png
+
+In the output above, you can see that our route from PC to PC-1 is indeed through the switch we set up. If you would like, you can also test with traceroute, in the manner of::
+
+	$ traceroute pc-1
+
+Step 7 - See Floodlight's Web Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Floodlight has a simple web interface built in. It allows you to see which nodes are connected to the switch, and which rules are currently active. Access it by opening a browser window to::
+
+	http://pcXXX.emulab.net:8080/ui/index.html
+
+Of course, replace your switch's hostname with the one above.
+
+Additionally, take note of the DPID of the switch that you created::
+
+.. image:: ../assets/images/ex3-floodlight-ui.png
+
+Step 8 - Put Some Routing Rules!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now for the *programmable networks* part of our openflow experiment. Let's get back in the terminal window that is connected to our switch. We'll now add a rule to our switch through Floodlight that will drop any packets coming from PC (10.10.2.2). Be sure to adjust your IPs below if they don't match up. Also, replace [DPID] with the DPID you found above::
+
+	$ curl -d '{"switch": "[DPID]", "name":"drop-flow", "src-ip": "10.10.2.2", "dst-ip":"10.10.1.1","active":"true"}' http://127.0.0.1:8080/wm/staticflowentrypusher/json
+
+Let's make sure that rule was pushed correctly, by issuing::
+
+	$ curl http://127.0.0.1:8080/wm/staticflowentrypusher/list/[DPID]/json | json_pp -t dumper
+
+And you'll see something similar too:
+
+.. image:: ../assets/images/ex3-floodlight-rules.png
+
+Step 9 - Retest That Switch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Go back to step 6 where we were on **PC**, and try to ping PC-1. How did that work? Did it fail?
+
+Congratulations! You programmed your first switch with a simple JSON packet. If you want to remove the rule and try once more, you'll find that your packets are free to flow again::
+
+	$ curl -X DELETE -d '{"name":"ping-flow"}' http://127.0.0.1:8080/m/staticflowentrypusher/json
+
+Step 10 - Think About The Applications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For the purposes of this example, we manually pushed all the required JSON rules to demonstrate the programmability of the switch.
+
+But imagine that instead of pushing the rules manually, you wrote a web application to push those rules instead. Since the switch is now controllable with something like JSON, you can truly define the behavior of your network *with software*. That's the essence of software-defined networking!
 
 Additional Resources
 --------------------
 
 This tutorial was adapted from this blog post for GENI: http://networkstatic.net/2012/06/openflow-openvswitch-lab/
+
+For more on the Floodlight REST API, and what methods are available: http://www.openflowhub.org/display/floodlightcontroller/REST+API
