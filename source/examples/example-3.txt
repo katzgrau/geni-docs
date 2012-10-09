@@ -220,7 +220,7 @@ Let's make sure that rule was pushed correctly, by issuing::
 
 	$ curl http://127.0.0.1:8080/wm/staticflowentrypusher/list/[DPID]/json | json_pp -t dumper
 
-And you'll see something similar too:
+And you'll see something similar to:
 
 .. image:: ../assets/images/ex3-floodlight-rules.png
 
