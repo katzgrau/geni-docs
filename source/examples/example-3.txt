@@ -119,15 +119,13 @@ So we have interfaces ``eth2`` and ``eth4``. We want to configure Open vSwitch t
 	ovs-vsctl add-port br-int eth2
 	ifconfig eth2 0
 	ifconfig br-int 10.10.1.2 netmask 255.255.255.0
-	route add default gw 0.0.0.0 br-int
-	route del default gw 0.0.0.0 eth2
+	route add -net 10.10.1.0 netmask 255.255.255.0 dev br-int
 
 	ovs-vsctl add-br br-int2
 	ovs-vsctl add-port br-int2 eth4
 	ifconfig eth4 0
 	ifconfig br-int2 10.10.2.1 netmask 255.255.255.0
-	route add default gw 0.0.0.0 br-int2
-	route del default gw 0.0.0.0 eth4
+	route add -net 10.10.2.0 netmask 255.255.255.0 dev br-int2
 
 At this point, running another::
 
@@ -231,7 +229,7 @@ Go back to step 6 where we were on **PC**, and try to ping PC-1. How did that wo
 
 Congratulations! You programmed your first switch with a simple JSON packet. If you want to remove the rule and try once more, you'll find that your packets are free to flow again::
 
-	$ curl -X DELETE -d '{"name":"ping-flow"}' http://127.0.0.1:8080/m/staticflowentrypusher/json
+	$ curl -X DELETE -d '{"name":"drop-flow"}' http://127.0.0.1:8080/wm/staticflowentrypusher/json
 
 Step 10 - Think About The Applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
